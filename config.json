@@ -1,0 +1,70 @@
+{
+  "log": {
+    "level": "error"
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "tls",
+        "tag": "google",
+        "detour": "proxy",
+        "server": "8.8.8.8"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "address": "172.18.0.1/30",
+      "auto_route": true,
+      "strict_route": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "proxy",
+      "server": "172.66.197.97",
+      "server_port": 2053,
+      "uuid": "05d06605-6319-4a35-8b0f-36637130ad19",
+      "tls": {
+        "enabled": true,
+        "server_name": "flat-hall-df78.ho3eindp99.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "flat-hall-df78.ho3eindp99.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true
+  }
+}
