@@ -25,7 +25,7 @@
       "type": "hysteria2",
       "tag": "proxy",
       "server": "18.157.222.169",
-      "server_port": 4040,
+      "server_port": 8880,
       "obfs": {
         "type": "salamander",
         "password": "Masir_Sefid"
