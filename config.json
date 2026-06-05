@@ -22,18 +22,25 @@
   ],
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "proxy",
-      "server": "18.157.222.169",
-      "server_port": 8880,
-      "obfs": {
-        "type": "salamander",
-        "password": "Masir_Sefid"
-      },
-      "password": "Masir_Sefid",
+      "server": "104.25.14.221",
+      "server_port": 2053,
+      "uuid": "05d06605-6319-4a35-8b0f-36637130ad19",
       "tls": {
         "enabled": true,
-        "server_name": "free.masir-sefid.shop"
+        "server_name": "flat-hall-df78.ho3eindp99.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "flat-hall-df78.ho3eindp99.workers.dev"
+        }
       }
     },
     {
