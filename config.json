@@ -5,10 +5,10 @@
   "dns": {
     "servers": [
       {
-        "type": "tls",
-        "tag": "google",
+        "type": "udp",
+        "tag": "quad9",
         "detour": "proxy",
-        "server": "8.8.8.8"
+        "server": "9.9.9.9"
       }
     ]
   },
