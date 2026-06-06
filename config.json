@@ -24,8 +24,8 @@
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "104.25.14.221",
-      "server_port": 2053,
+      "server": "104.16.109.35",
+      "server_port": 2087,
       "uuid": "05d06605-6319-4a35-8b0f-36637130ad19",
       "tls": {
         "enabled": true,
