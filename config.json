@@ -24,22 +24,20 @@
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "104.25.14.221",
-      "server_port": 2053,
-      "uuid": "05d06605-6319-4a35-8b0f-36637130ad19",
+      "server": "195.15.253.247",
+      "server_port": 2083,
+      "uuid": "2231ffa1-3d98-4849-998a-0aed095f6718",
       "tls": {
         "enabled": true,
-        "server_name": "flat-hall-df78.ho3eindp99.workers.dev",
+        "server_name": "store.steampowered.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "flat-hall-df78.ho3eindp99.workers.dev"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xGtE0lNJhquu9-SbAz0ONZrbKXp7jztZUn6lyz9iUW4",
+          "short_id": "635e294ebe95"
         }
       }
     },
