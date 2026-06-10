@@ -5,7 +5,7 @@
   "dns": {
     "servers": [
       {
-        "type": "tcp",
+        "type": "udp",
         "tag": "quad9",
         "detour": "proxy",
         "server": "9.9.9.9"
@@ -22,25 +22,18 @@
   ],
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "proxy",
-      "server": "104.19.219.32",
-      "server_port": 2087,
-      "uuid": "05d06605-6319-4a35-8b0f-36637130ad19",
+      "server": "206.189.58.246",
+      "server_port": 443,
+      "obfs": {
+        "type": "salamander",
+        "password": "Masir_Sefid"
+      },
+      "password": "Masir_Sefid",
       "tls": {
         "enabled": true,
-        "server_name": "flat-hall-df78.ho3eindp99.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "flat-hall-df78.ho3eindp99.workers.dev"
-        }
+        "server_name": "Api1.masir-sefid-1.my"
       }
     },
     {
