@@ -24,12 +24,12 @@
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "172.67.145.109",
+      "server": "104.17.20.32",
       "server_port": 443,
-      "uuid": "86971f69-2b80-4d8a-8400-594237a7891b",
+      "uuid": "8f9e5c8e-e7ee-4d71-8398-2e0d00c17b83",
       "tls": {
         "enabled": true,
-        "server_name": "0OcAJM8-wNk7WTsAr27An89151P8qhCa.ho3eINdP99.woRKeRs.deV",
+        "server_name": "silent-hill-7468.ho3eindp99.workers.dev",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -37,9 +37,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/eyJqdW5rIjoiR28yN05CNEtIYVVxY2ljWSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "path": "/",
         "headers": {
-          "Host": "0ocajm8-wnk7wtsar27an89151p8qhca.ho3eindp99.workers.dev"
+          "Host": "silent-hill-7468.ho3eindp99.workers.dev"
         }
       }
     },
