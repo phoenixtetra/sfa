@@ -15,33 +15,30 @@
   "inbounds": [
     {
       "type": "tun",
-      "address": "172.18.0.1/30",
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
       "strict_route": true
     }
   ],
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "proxy",
-      "server": "104.17.20.32",
+      "server": "37.156.46.29",
       "server_port": 443,
-      "uuid": "8f9e5c8e-e7ee-4d71-8398-2e0d00c17b83",
+      "obfs": {
+        "type": "salamander",
+        "password": "Masir_Sefid"
+      },
+      "password": "Masir_Sefid",
       "tls": {
         "enabled": true,
-        "server_name": "silent-hill-7468.ho3eindp99.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "api.masir-sefid-1.my"
       },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "silent-hill-7468.ho3eindp99.workers.dev"
-        }
-      }
+      "domain_resolver": "direct"
     },
     {
       "type": "direct",
