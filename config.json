@@ -5,7 +5,7 @@
   "dns": {
     "servers": [
       {
-        "type": "udp",
+        "type": "tcp",
         "tag": "quad9",
         "detour": "proxy",
         "server": "9.9.9.9"
