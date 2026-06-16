@@ -5,53 +5,52 @@
   "dns": {
     "servers": [
       {
-        "type": "udp",
+        "type": "tcp",
         "tag": "quad9",
         "detour": "proxy",
         "server": "9.9.9.9"
+      },
+      {
+        "type": "local",
+        "tag": "direct",
+        "detour": "direct"
       }
     ]
   },
   "inbounds": [
     {
       "type": "tun",
-      "address": [
-        "172.18.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
+      "address": "172.18.0.1/30",
       "auto_route": true,
+      "auto_redirect": true,
       "strict_route": true
     }
   ],
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "proxy",
-      "server": "104.24.0.209",
-      "server_port": 443,
-      "uuid": "8f9e5c8e-e7ee-4d71-8398-2e0d00c17b83",
+      "server": "reddeadfan.rd-team.ru",
+      "server_port": 2026,
+      "obfs": {
+        "type": "salamander",
+        "password": "FxZylbqClUqVqAs2nezW9kPyFb2edZ2"
+      },
+      "password": "rstnnl2705:QtmSqzxgO95zXwNcgVYSjDl02aRsjrrl",
       "tls": {
         "enabled": true,
-        "server_name": "silent-hill-7468.ho3eindp99.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "reddeadfan.rd-team.ru",
+        "insecure": true
       },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "silent-hill-7468.ho3eindp99.workers.dev"
-        }
-      }
+      "domain_resolver": "direct"
     },
     {
       "type": "direct",
       "tag": "direct",
       "tcp_fast_open": true,
       "tcp_multi_path": true,
-      "udp_fragment": true
+      "udp_fragment": true,
+      "domain_resolver": "direct"
     }
   ],
   "route": {
