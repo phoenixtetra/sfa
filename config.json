@@ -6,14 +6,9 @@
     "servers": [
       {
         "type": "tcp",
-        "tag": "quad9",
+        "tag": "cloudflare",
         "detour": "proxy",
-        "server": "9.9.9.9"
-      },
-      {
-        "type": "local",
-        "tag": "direct",
-        "detour": "direct"
+        "server": "1.1.1.1"
       }
     ]
   },
@@ -30,27 +25,27 @@
     {
       "type": "hysteria2",
       "tag": "proxy",
-      "server": "reddeadfan.rd-team.ru",
-      "server_port": 2026,
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
+      "server": "144.31.224.163",
+      "server_port": 1935,
       "obfs": {
         "type": "salamander",
-        "password": "FxZylbqClUqVqAs2nezW9kPyFb2edZ2"
+        "password": "lhfl2z9mjngb7csh"
       },
-      "password": "rstnnl2705:QtmSqzxgO95zXwNcgVYSjDl02aRsjrrl",
+      "password": "lak374gtxzrxz241",
       "tls": {
         "enabled": true,
-        "server_name": "reddeadfan.rd-team.ru",
-        "insecure": true
-      },
-      "domain_resolver": "direct"
+        "server_name": "nrealistic.nn-foto.ru"
+      }
     },
     {
       "type": "direct",
       "tag": "direct",
       "tcp_fast_open": true,
       "tcp_multi_path": true,
-      "udp_fragment": true,
-      "domain_resolver": "direct"
+      "udp_fragment": true
     }
   ],
   "route": {
