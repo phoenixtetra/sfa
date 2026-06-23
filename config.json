@@ -2,6 +2,7 @@
   "log": {
     "level": "error"
   },
+  "dns": {
     "servers": [
       {
         "type": "tcp",
@@ -9,7 +10,8 @@
         "detour": "proxy",
         "server": "1.1.1.1"
       }
-    ],
+    ]
+  },
   "inbounds": [
     {
       "type": "tun",
