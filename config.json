@@ -28,16 +28,16 @@
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "udp_fragment": true,
-      "server": "144.31.224.163",
-      "server_port": 1935,
+      "server": "130.49.161.70",
+      "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "lhfl2z9mjngb7csh"
+        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
       },
-      "password": "lak374gtxzrxz241",
+      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
       "tls": {
         "enabled": true,
-        "server_name": "nrealistic.nn-foto.ru"
+        "server_name": "hy2.aspidnet.xyz"
       }
     },
     {
