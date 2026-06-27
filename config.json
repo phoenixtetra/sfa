@@ -28,16 +28,16 @@
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "udp_fragment": true,
-      "server": "130.49.161.70",
+      "server": "103.251.167.168",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
+        "password": "2a7e8084206388f4"
       },
-      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
+      "password": "gdubbi2zb6gdp0c8",
       "tls": {
         "enabled": true,
-        "server_name": "hy2.aspidnet.xyz"
+        "server_name": "gettestin.xxee.ru"
       }
     },
     {
