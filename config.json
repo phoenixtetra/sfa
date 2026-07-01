@@ -28,16 +28,16 @@
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "udp_fragment": true,
-      "server": "130.49.161.70",
+      "server": "2.26.49.16",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
+        "password": "3sv5vpdl9xr84lyb"
       },
-      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
+      "password": "653m8mmiy7048p0f",
       "tls": {
         "enabled": true,
-        "server_name": "hy2.aspidnet.xyz"
+        "server_name": "social.klipp.su"
       }
     },
     {
