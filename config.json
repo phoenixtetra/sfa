@@ -28,16 +28,16 @@
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "udp_fragment": true,
-      "server": "2.26.49.16",
-      "server_port": 443,
+      "server": "188.132.141.113",
+      "server_port": 52067,
       "obfs": {
         "type": "salamander",
-        "password": "3sv5vpdl9xr84lyb"
+        "password": "60wvbymjlc9zw3gk"
       },
-      "password": "653m8mmiy7048p0f",
+      "password": "zru63dr6vokx56iy",
       "tls": {
         "enabled": true,
-        "server_name": "social.klipp.su"
+        "server_name": "tr-1.metsima.com"
       }
     },
     {
