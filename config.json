@@ -5,7 +5,7 @@
   "dns": {
     "servers": [
       {
-        "type": "udp",
+        "type": "tcp",
         "tag": "quad9",
         "detour": "proxy",
         "server": "9.9.9.9"
@@ -23,14 +23,18 @@
   ],
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "hysteria2",
       "tag": "proxy",
-      "server": "179.237.74.47",
-      "server_port": 80,
-      "password": "4COPE----AZ--KANAL---JKVPN-----",
-      "transport": {
-        "type": "http",
-        "host": "promotion.yahoo.com"
+      "server": "130.49.161.70",
+      "server_port": 443,
+      "obfs": {
+        "type": "salamander",
+        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
+      },
+      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2.aspidnet.xyz"
       }
     },
     {
