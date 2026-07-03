@@ -5,7 +5,7 @@
   "dns": {
     "servers": [
       {
-        "type": "tcp",
+        "type": "udp",
         "tag": "quad9",
         "detour": "proxy",
         "server": "9.9.9.9"
@@ -23,18 +23,13 @@
   ],
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "proxy",
-      "server": "130.49.161.70",
-      "server_port": 443,
-      "obfs": {
-        "type": "salamander",
-        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
-      },
-      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy2.aspidnet.xyz"
+      "server": "31.56.176.225",
+      "server_port": 2090,
+      "uuid": "eab915bc-d2df-73d1-47d0-6eb240497055",
+      "transport": {
+        "type": "http"
       }
     },
     {
