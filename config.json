@@ -5,10 +5,10 @@
   "dns": {
     "servers": [
       {
-        "type": "tcp",
-        "tag": "cloudflare",
+        "type": "udp",
+        "tag": "quad9",
         "detour": "proxy",
-        "server": "1.1.1.1"
+        "server": "9.9.9.9"
       }
     ]
   },
@@ -23,29 +23,19 @@
   ],
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "trojan",
       "tag": "proxy",
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "udp_fragment": true,
-      "server": "188.132.141.113",
-      "server_port": 52067,
-      "obfs": {
-        "type": "salamander",
-        "password": "60wvbymjlc9zw3gk"
-      },
-      "password": "zru63dr6vokx56iy",
-      "tls": {
-        "enabled": true,
-        "server_name": "tr-1.metsima.com"
+      "server": "179.237.74.47",
+      "server_port": 80,
+      "password": "4COPE----AZ--KANAL---JKVPN-----",
+      "transport": {
+        "type": "http",
+        "host": "promotion.yahoo.com"
       }
     },
     {
       "type": "direct",
-      "tag": "direct",
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "udp_fragment": true
+      "tag": "direct"
     }
   ],
   "route": {
