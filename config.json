@@ -25,16 +25,17 @@
     {
       "type": "hysteria2",
       "tag": "proxy",
-      "server": "188.132.141.113",
-      "server_port": 52067,
+      "server": "91.107.152.188",
+      "server_port": 40460,
       "obfs": {
         "type": "salamander",
-        "password": "60wvbymjlc9zw3gk"
+        "password": "t-me-V2RayyNGvpn"
       },
-      "password": "zru63dr6vokx56iy",
+      "password": "w1BoB6s3L3",
       "tls": {
         "enabled": true,
-        "server_name": "tr-1.metsima.com"
+        "server_name": "www.amd.com",
+        "insecure": true
       }
     },
     {
