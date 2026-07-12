@@ -23,23 +23,19 @@
   ],
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "proxy",
-      "server": "3.76.217.186",
-      "server_port": 443,
-      "uuid": "5548a1c5-d9b8-4b40-868e-46bc7db81f54",
+      "server": "91.107.152.188",
+      "server_port": 40460,
+      "obfs": {
+        "type": "salamander",
+        "password": "t-me-V2RayyNGvpn"
+      },
+      "password": "CakZRUUlundefinedS",
       "tls": {
         "enabled": true,
-        "server_name": "www.intel.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "o1cbEZQI_PAJPsRuwkeYLh8vPpRmmA22TOzaYvhkBmM",
-          "short_id": "69f0ca006f88"
-        }
+        "server_name": "www.amd.com",
+        "insecure": true
       }
     },
     {
