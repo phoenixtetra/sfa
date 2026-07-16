@@ -5,7 +5,7 @@
   "dns": {
     "servers": [
       {
-        "type": "udp",
+        "type": "tcp",
         "tag": "quad9",
         "detour": "proxy",
         "server": "9.9.9.9"
@@ -23,19 +23,27 @@
   ],
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "proxy",
-      "server": "91.107.152.188",
-      "server_port": 31999,
-      "obfs": {
-        "type": "salamander",
-        "password": "t-me-V2RayyNGvpn"
-      },
-      "password": "RKJDOKrcIZ",
+      "server": "88.216.130.20",
+      "server_port": 443,
+      "uuid": "f3720808-2ea6-438c-a7f1-e75f0c2d8dfb",
       "tls": {
         "enabled": true,
-        "server_name": "www.amd.com",
-        "insecure": true
+        "server_name": "relay.oneoneok.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Bo6VOZzJ5Z9w328L1F1sQzlzLNbiIpuWbV021xPltxE",
+          "short_id": "cd40e7dbd53a28ce"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "api.v1.StreamService"
       }
     },
     {
