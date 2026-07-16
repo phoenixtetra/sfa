@@ -26,7 +26,7 @@
       "type": "hysteria2",
       "tag": "proxy",
       "server": "91.107.152.188",
-      "server_port": 40460,
+      "server_port": 31999,
       "obfs": {
         "type": "salamander",
         "password": "t-me-V2RayyNGvpn"
