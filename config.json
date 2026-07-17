@@ -23,19 +23,27 @@
   ],
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "proxy",
-      "server": "91.107.152.188",
-      "server_port": 31999,
-      "obfs": {
-        "type": "salamander",
-        "password": "t-me-V2RayyNGvpn"
-      },
-      "password": "ZkaDQncyundefineda",
+      "server": "89.105.219.200",
+      "server_port": 443,
+      "uuid": "86208db7-8bbc-42c2-9eb2-ffe5675502c3",
       "tls": {
         "enabled": true,
-        "server_name": "www.amd.com",
-        "insecure": true
+        "server_name": "router.reasonok.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "lOONDaJA7m6EtXSWb0DdUIAfOEO2_hqLsqn6ifA4gXE",
+          "short_id": "018f65354c647e46"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "sync.v2.FeedService"
       }
     },
     {
