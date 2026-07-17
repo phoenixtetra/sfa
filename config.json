@@ -25,25 +25,25 @@
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "89.105.219.200",
+      "server": "89.105.220.232",
       "server_port": 443,
       "uuid": "86208db7-8bbc-42c2-9eb2-ffe5675502c3",
       "tls": {
         "enabled": true,
-        "server_name": "router.reasonok.com",
+        "server_name": "edge1.oneokgames.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "lOONDaJA7m6EtXSWb0DdUIAfOEO2_hqLsqn6ifA4gXE",
-          "short_id": "018f65354c647e46"
+          "public_key": "0ffnN7CdnOgEEFJ3AY1lnuTtsOPDL059UaTTxGxDjTA",
+          "short_id": "66ffd800ba2ec7c3"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "sync.v2.FeedService"
+        "service_name": "home.v1.ApiService"
       }
     },
     {
