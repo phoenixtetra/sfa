@@ -23,26 +23,19 @@
   ],
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "proxy",
-      "server": "2.26.82.237",
-      "server_port": 443,
-      "uuid": "906be882-7f16-47c3-8702-59db2ada9688",
+      "server": "91.107.152.188",
+      "server_port": 31999,
+      "obfs": {
+        "type": "salamander",
+        "password": "t-me-V2RayyNGvpn"
+      },
+      "password": "73x493S1pE",
       "tls": {
         "enabled": true,
-        "server_name": "speed.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "VmBEjLUpiEnoNIaPNGDfVPIOzH_ktSDdsGGAvissxgI"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "server_name": "www.amd.com",
+        "insecure": true
       }
     },
     {
