@@ -23,19 +23,14 @@
   ],
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "proxy",
-      "server": "91.107.152.188",
-      "server_port": 31999,
-      "obfs": {
-        "type": "salamander",
-        "password": "t-me-V2RayyNGvpn"
-      },
-      "password": "73x493S1pE",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amd.com",
-        "insecure": true
+      "server": "45.86.159.131",
+      "server_port": 2085,
+      "uuid": "ae86f68e-84c7-41de-b69f-87285451fb71",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
       }
     },
     {
