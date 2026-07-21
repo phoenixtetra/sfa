@@ -30,9 +30,7 @@
       "uuid": "776cf715-a0cd-4470-9ac4-29b46231f6af",
       "transport": {
         "type": "http",
-        "host": [
-          "play.google.com"
-        ],
+        "host": "play.google.com",
         "path": "/"
       }
     },
