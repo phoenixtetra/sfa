@@ -22,7 +22,6 @@
     }
   ],
   "outbounds": [
-  "outbounds": [
     {
       "type": "vless",
       "tag": "proxy",
@@ -37,11 +36,6 @@
         "path": "/"
       }
     },
-    {
-      "type": "direct",
-      "tag": "direct"
-    }
-  ],
     {
       "type": "direct",
       "tag": "direct"
