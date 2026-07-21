@@ -22,30 +22,26 @@
     }
   ],
   "outbounds": [
+  "outbounds": [
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "150.241.72.77",
+      "server": "91.107.160.79",
       "server_port": 443,
-      "uuid": "8fef09bc-a48a-44ae-95cd-118e58ab796a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amd.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ",
-          "short_id": "635a76c25a4b1820"
-        }
-      },
+      "uuid": "776cf715-a0cd-4470-9ac4-29b46231f6af",
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-api-v2"
+        "type": "http",
+        "host": [
+          "play.google.com"
+        ],
+        "path": "/"
       }
     },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
     {
       "type": "direct",
       "tag": "direct"
