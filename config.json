@@ -25,12 +25,25 @@
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "45.86.159.131",
-      "server_port": 2085,
-      "uuid": "ae86f68e-84c7-41de-b69f-87285451fb71",
+      "server": "150.241.72.77",
+      "server_port": 443,
+      "uuid": "8fef09bc-a48a-44ae-95cd-118e58ab796a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ",
+          "short_id": "635a76c25a4b1820"
+        }
+      },
       "transport": {
         "type": "grpc",
-        "service_name": "vless"
+        "service_name": "grpc-api-v2"
       }
     },
     {
