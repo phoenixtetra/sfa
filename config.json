@@ -23,15 +23,19 @@
   ],
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "proxy",
-      "server": "167.233.33.113",
-      "server_port": 2087,
-      "uuid": "13ce37df-0738-4130-9b02-a87658921feb",
-      "transport": {
-        "type": "http",
-        "host": "play.google.com",
-        "path": "/"
+      "server": "162.19.181.176",
+      "server_port": 40837,
+      "obfs": {
+        "type": "salamander",
+        "password": "t-me-V2RayyNGvpn"
+      },
+      "password": "V2RayyNGvpn",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.oracle.com",
+        "insecure": true
       }
     },
     {
