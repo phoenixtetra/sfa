@@ -25,9 +25,9 @@
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "91.107.160.79",
-      "server_port": 443,
-      "uuid": "776cf715-a0cd-4470-9ac4-29b46231f6af",
+      "server": "167.233.33.113",
+      "server_port": 2087,
+      "uuid": "13ce37df-0738-4130-9b02-a87658921feb",
       "transport": {
         "type": "http",
         "host": "play.google.com",
