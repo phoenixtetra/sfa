@@ -5,10 +5,10 @@
   "dns": {
     "servers": [
       {
-        "type": "tcp",
-        "tag": "quad9",
+        "type": "udp",
+        "tag": "google",
         "detour": "proxy",
-        "server": "9.9.9.9"
+        "server": "8.8.8.8"
       }
     ]
   },
@@ -16,25 +16,23 @@
     {
       "type": "tun",
       "address": "172.18.0.1/30",
-      "auto_route": true,
-      "auto_redirect": true,
-      "strict_route": true
+      "auto_route": true
     }
   ],
   "outbounds": [
     {
       "type": "hysteria2",
       "tag": "proxy",
-      "server": "162.19.181.176",
-      "server_port": 40837,
+      "server": "51.159.137.79",
+      "server_port": 55809,
       "obfs": {
         "type": "salamander",
         "password": "t-me-V2RayyNGvpn"
       },
-      "password": "V2RayyNGvpn",
+      "password": "KKKtK5NwIU",
       "tls": {
         "enabled": true,
-        "server_name": "www.oracle.com",
+        "server_name": "www.amd.com",
         "insecure": true
       }
     },
