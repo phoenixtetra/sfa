@@ -5,7 +5,7 @@
   "dns": {
     "servers": [
       {
-        "type": "udp",
+        "type": "tcp",
         "tag": "google",
         "detour": "proxy",
         "server": "8.8.8.8"
@@ -21,19 +21,19 @@
   ],
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "proxy",
-      "server": "51.159.137.79",
-      "server_port": 55809,
-      "obfs": {
-        "type": "salamander",
-        "password": "t-me-V2RayyNGvpn"
-      },
-      "password": "KKKtK5NwIU",
+      "server": "186.190.211.188",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "tls": {
         "enabled": true,
-        "server_name": "www.amd.com",
-        "insecure": true
+        "server_name": "186.190.211.188",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       }
     },
     {
