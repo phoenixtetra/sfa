@@ -23,16 +23,17 @@
     {
       "type": "hysteria2",
       "tag": "proxy",
-      "server": "2.26.92.136",
+      "server": "91.107.178.22",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "lvy1Hw_j4Hwx8oIL2tEa315Sb4t7QrjF"
+        "password": "RedmEthIS-Join-V2RayyNGvpn-oBsPaHard183hgak"
       },
-      "password": "hy2_czaawdhc:VwWo0eBZC9jU3xCE0FuTmbX6xmnj33Iq",
+      "password": "HYi0xllvAM",
       "tls": {
         "enabled": true,
-        "server_name": "nl2.cleanersaz.help"
+        "server_name": "www.refersion.com",
+        "insecure": true
       }
     },
     {
