@@ -24,15 +24,15 @@
       "type": "hysteria2",
       "tag": "proxy",
       "server": "91.107.178.22",
-      "server_port": 443,
+      "server_port": 43913,
       "obfs": {
         "type": "salamander",
-        "password": "RedmEthIS-Join-V2RayyNGvpn-oBsPaHard183hgak"
+        "password": "V2RayyNGvpn"
       },
-      "password": "voQTxwGh4I",
+      "password": "EaDTeupk9I",
       "tls": {
         "enabled": true,
-        "server_name": "www.refersion.com",
+        "server_name": "assets.gateway-stream.com",
         "insecure": true
       }
     },
