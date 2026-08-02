@@ -23,16 +23,16 @@
     {
       "type": "hysteria2",
       "tag": "proxy",
-      "server": "91.107.178.22",
+      "server": "185.253.117.217",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "RedmEthIS-Join-V2RayyNGvpn-oBsPaHard183hgak"
+        "password": "TelEgRam=V2RayyNGvpn"
       },
-      "password": "mY0pSnWDFk",
+      "password": "reSpH6aX5g",
       "tls": {
         "enabled": true,
-        "server_name": "www.refersion.com",
+        "server_name": "www.intel.com",
         "insecure": true
       }
     },
