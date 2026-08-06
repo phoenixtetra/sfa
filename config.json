@@ -21,23 +21,18 @@
   ],
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "proxy",
-      "server": "93.114.194.118",
-      "server_port": 448,
-      "uuid": "bc5b801f-49a7-4db7-ac92-a2c57d42d132",
+      "server": "179.61.251.253",
+      "server_port": 37003,
+      "obfs": {
+        "type": "salamander",
+        "password": "83v9muumcyikh5ch"
+      },
+      "password": "TelegramVPNjey",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "qX6IJfWNN-SNray6xJugb8pCpgY_zjeyCfvq9IUyd3w",
-          "short_id": "e1bdc95c1554c8eb"
-        }
+        "server_name": "de.jey.cc.cd"
       }
     },
     {
