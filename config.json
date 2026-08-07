@@ -26,12 +26,12 @@
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "91.107.252.170",
-      "server_port": 443,
-      "uuid": "0169fc3b-8462-4dc7-bfbd-b09c4451d78c",
+      "server": "2a01:4f9:c010:4531::1",
+      "server_port": 52525,
+      "uuid": "daa63137-0b76-4752-8041-0ba177eea1bb",
       "transport": {
         "type": "http",
-        "host": "www.amzn.com"
+        "host": "mehrosaboran--mehrosaboran--mehrosaboran"
       }
     },
     {
