@@ -21,18 +21,14 @@
   ],
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "proxy",
-      "server": "179.61.251.253",
-      "server_port": 37003,
-      "obfs": {
-        "type": "salamander",
-        "password": "83v9muumcyikh5ch"
-      },
-      "password": "TelegramVPNjey",
-      "tls": {
-        "enabled": true,
-        "server_name": "de.jey.cc.cd"
+      "server": "91.107.252.170",
+      "server_port": 443,
+      "uuid": "0169fc3b-8462-4dc7-bfbd-b09c4451d78c",
+      "transport": {
+        "type": "http",
+        "host": "www.amzn.com"
       }
     },
     {
