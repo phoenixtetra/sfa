@@ -9,6 +9,20 @@
         "tag": "google",
         "detour": "proxy",
         "server": "8.8.8.8"
+      },
+      {
+        "type": "udp",
+        "tag": "local",
+        "server": "78.157.42.100"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": [
+          "geosite-private",
+          "geosite-ir"
+        ],
+        "server": "local"
       }
     ]
   },
@@ -16,7 +30,7 @@
     {
       "type": "tun",
       "address": [
-        "172.18.0.1/30",
+        "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
       ],
       "auto_route": true
@@ -24,14 +38,25 @@
   ],
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "proxy",
-      "server": "204.168.196.173",
-      "server_port": 6985,
-      "uuid": "832e0199-9614-4d74-a7ba-1dca5453dab5",
+      "server": "104.21.5.155",
+      "server_port": 443,
+      "password": "MITIVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "de1-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
-        "type": "http",
-        "host": "play.google.com"
+        "type": "ws",
+        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/dde2---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
+        "headers": {
+          "Host": "des-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe"
+        }
       }
     },
     {
@@ -51,8 +76,49 @@
       {
         "ip_is_private": true,
         "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
       }
     ],
-    "auto_detect_interface": true
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-category-ads-all",
+        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-category-ads-all.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-private",
+        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-private.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-ir.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geoip-ir.srs"
+      }
+    ],
+    "auto_detect_interface": true,
+    "default_domain_resolver": "google"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
   }
 }
