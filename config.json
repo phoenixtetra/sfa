@@ -26,24 +26,12 @@
     {
       "type": "vless",
       "tag": "proxy",
-      "server": "170.168.97.5",
-      "server_port": 8443,
-      "uuid": "c6f220ed-41f2-21ba-438c-80f05ebbf92a",
-      "tls": {
-        "enabled": true,
-        "server_name": "download.nvidia.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-        }
-      },
+      "server": "204.168.196.173",
+      "server_port": 6985,
+      "uuid": "832e0199-9614-4d74-a7ba-1dca5453dab5",
       "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
+        "type": "http",
+        "host": "play.google.com"
       }
     },
     {
