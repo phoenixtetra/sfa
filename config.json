@@ -38,25 +38,14 @@
   ],
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "proxy",
-      "server": "104.21.5.155",
-      "server_port": 443,
-      "password": "MITIVPN",
-      "tls": {
-        "enabled": true,
-        "server_name": "de1-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "server": "167.233.54.146",
+      "server_port": 2087,
+      "uuid": "4077de3d-64cb-41cb-bee2-9178210e5fb4",
       "transport": {
-        "type": "ws",
-        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/dde2---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
-        "headers": {
-          "Host": "des-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe"
-        }
+        "type": "http",
+        "host": "play.google.com"
       }
     },
     {
