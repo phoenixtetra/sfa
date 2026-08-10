@@ -6,9 +6,9 @@
     "servers": [
       {
         "type": "tcp",
-        "tag": "google",
+        "tag": "cloudflare",
         "detour": "proxy",
-        "server": "8.8.8.8"
+        "server": "1.0.0.1"
       },
       {
         "type": "udp",
@@ -38,26 +38,12 @@
   ],
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "proxy",
-      "server": "151.101.56.7",
-      "server_port": 443,
-      "password": "MiTiVPN",
-      "tls": {
-        "enabled": true,
-        "server_name": "default.fastly.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/dde---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
-        "headers": {
-          "Host": "s1a-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net"
-        }
-      }
+      "server": "108.181.58.239",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CJmTCCx7Ltud"
     },
     {
       "type": "direct",
@@ -113,7 +99,7 @@
       }
     ],
     "auto_detect_interface": true,
-    "default_domain_resolver": "google"
+    "default_domain_resolver": "cloudflare"
   },
   "experimental": {
     "cache_file": {
