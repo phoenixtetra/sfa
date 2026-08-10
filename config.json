@@ -5,18 +5,22 @@
   "dns": {
     "servers": [
       {
-        "type": "tcp",
         "tag": "cloudflare",
-        "detour": "proxy",
-        "server": "1.0.0.1"
+        "type": "tcp",
+        "server": "1.0.0.1",
+        "detour": "proxy"
       },
       {
-        "type": "udp",
         "tag": "local",
+        "type": "udp",
         "server": "78.157.42.100"
       }
     ],
     "rules": [
+      {
+        "query_type": "HTTPS",
+        "action": "reject"
+      },
       {
         "rule_set": [
           "geosite-private",
@@ -24,29 +28,28 @@
         ],
         "server": "local"
       }
-    ]
+    ],
+    "strategy": "ipv4_only"
   },
   "inbounds": [
     {
       "type": "tun",
-      "address": [
-        "172.19.0.1/30"
-      ],
+      "address": ["172.19.0.1/30"],
       "auto_route": true
     }
   ],
   "outbounds": [
     {
-      "type": "shadowsocks",
       "tag": "proxy",
+      "type": "shadowsocks",
       "server": "108.181.58.239",
       "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
       "password": "CJmTCCx7Ltud"
     },
     {
-      "type": "direct",
-      "tag": "direct"
+      "tag": "direct",
+      "type": "direct"
     }
   ],
   "route": {
@@ -61,6 +64,16 @@
       {
         "ip_is_private": true,
         "outbound": "direct"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          { "port": 853 },
+          { "network": "udp", "port": 443 },
+          { "protocol": "stun" }
+        ],
+        "action": "reject"
       },
       {
         "rule_set": "geosite-category-ads-all",
@@ -97,8 +110,8 @@
         "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geoip-ir.srs"
       }
     ],
-    "auto_detect_interface": true,
-    "default_domain_resolver": "cloudflare"
+    "default_domain_resolver": "cloudflare",
+    "auto_detect_interface": true
   },
   "experimental": {
     "cache_file": {
