@@ -41,11 +41,19 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "type": "shadowsocks",
-      "server": "51.102.205.132",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "type": "hysteria2",
+      "server": "45.92.219.237",
+      "server_port": 8486,
+      "password": "@Telegram@Configvibes",
+      "obfs": {
+        "type": "salamander",
+        "password": "Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------"
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "ftp.debian.org",
+        "insecure": true
+      }
     },
     {
       "tag": "direct",
