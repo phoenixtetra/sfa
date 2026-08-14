@@ -40,7 +40,17 @@
   ],
   "outbounds": [
     {
-      "tag": "proxy",
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "proxy-01",
+        "proxy-02"
+      ],
+      "url": "http://captive.apple.com/hotspot-detect.html",
+      "interval": "60m"
+    },
+    {
+      "tag": "proxy-01",
       "type": "hysteria2",
       "server": "45.92.219.237",
       "server_port": 8486,
@@ -54,6 +64,14 @@
         "server_name": "ftp.debian.org",
         "insecure": true
       }
+    },
+    {
+      "tag": "proxy-02",
+      "type": "shadowsocks",
+      "server": "51.102.205.132",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
       "tag": "direct",
