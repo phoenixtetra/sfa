@@ -8,7 +8,7 @@
         "tag": "cloudflare",
         "type": "tcp",
         "server": "1.0.0.1",
-        "detour": "auto"
+        "detour": "proxy"
       },
       {
         "tag": "local",
@@ -40,41 +40,7 @@
   ],
   "outbounds": [
     {
-      "tag": "auto",
-      "type": "urltest",
-      "outbounds": [
-        "select"
-      ],
-      "url": "http://captive.apple.com/hotspot-detect.html",
-      "interval": "60m",
-      "idle_timeout": "60m"
-    },
-    {
-      "tag": "select",
-      "type": "selector",
-      "outbounds": [
-        "proxy-01",
-        "proxy-02"
-      ]
-    },
-    {
-      "tag": "proxy-01",
-      "type": "hysteria2",
-      "server": "45.92.219.237",
-      "server_port": 8486,
-      "password": "@Telegram@Configvibes",
-      "obfs": {
-        "type": "salamander",
-        "password": "Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------"
-      },
-      "tls": {
-        "enabled": true,
-        "server_name": "ftp.debian.org",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "proxy-02",
+      "tag": "proxy",
       "type": "shadowsocks",
       "server": "51.102.205.132",
       "server_port": 443,
