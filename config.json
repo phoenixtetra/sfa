@@ -42,7 +42,7 @@
     {
       "tag": "auto",
       "type": "urltest",
-      "outbounds": ["🇩🇪", "🇹🇷"],
+      "outbounds": ["🇩🇪", "🇳🇱", "🇩🇪 🇩🇪", "🇹🇷"],
       "url": "http://captive.apple.com/hotspot-detect.html",
       "interval": "1h",
       "idle_timeout": "1h"
@@ -54,6 +54,36 @@
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
+    },
+    {
+      "tag": "🇳🇱",
+      "type": "shadowsocks",
+      "server": "108.181.58.239",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CJmTCCx7Ltud"
+    },
+    {
+      "tag": "🇩🇪 🇩🇪",
+      "type": "vless",
+      "server": "95.38.102.243",
+      "server_port": 443,
+      "uuid": "d0f4d620-db2b-45e0-8353-a073461b1130",
+      "tls": {
+        "enabled": true,
+        "server_name": "new01.asaltabie.monster",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "new01.asaltabie.monster"
+        }
+      }
     },
     {
       "tag": "🇹🇷",
