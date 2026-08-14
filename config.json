@@ -47,7 +47,8 @@
         "proxy-02"
       ],
       "url": "http://captive.apple.com/hotspot-detect.html",
-      "interval": "60m"
+      "interval": "60m",
+      "idle_timeout": "60m"
     },
     {
       "tag": "proxy-01",
