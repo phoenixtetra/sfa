@@ -8,7 +8,7 @@
         "tag": "cloudflare",
         "type": "tcp",
         "server": "1.0.0.1",
-        "detour": "select"
+        "detour": "auto"
       },
       {
         "tag": "local",
@@ -39,6 +39,16 @@
     }
   ],
   "outbounds": [
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "select"
+      ],
+      "url": "http://captive.apple.com/hotspot-detect.html",
+      "interval": "60m",
+      "idle_timeout": "60m"
+    },
     {
       "tag": "select",
       "type": "selector",
