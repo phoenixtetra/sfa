@@ -8,7 +8,7 @@
         "tag": "cloudflare",
         "type": "tcp",
         "server": "1.0.0.1",
-        "detour": "auto"
+        "detour": "proxy"
       },
       {
         "tag": "local",
@@ -40,36 +40,12 @@
   ],
   "outbounds": [
     {
-      "tag": "auto",
-      "type": "urltest",
-      "outbounds": ["🇩🇪", "🇹🇷"],
-      "url": "http://captive.apple.com/hotspot-detect.html",
-      "interval": "1h",
-      "idle_timeout": "1h"
-    },
-    {
-      "tag": "🇩🇪",
+      "tag": "proxy",
       "type": "shadowsocks",
       "server": "51.102.205.132",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
-    },
-    {
-      "tag": "🇹🇷",
-      "type": "hysteria2",
-      "server": "45.92.219.237",
-      "server_port": 8486,
-      "password": "@Telegram@Configvibes",
-      "obfs": {
-        "type": "salamander",
-        "password": "Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------"
-      },
-      "tls": {
-        "enabled": true,
-        "server_name": "ftp.debian.org",
-        "insecure": true
-      }
     },
     {
       "tag": "direct",
@@ -141,9 +117,6 @@
     "cache_file": {
       "enabled": true,
       "path": "cache.db"
-    },
-    "clash_api": {
-      "default_mode": "Enhanced"
     }
   }
 }
