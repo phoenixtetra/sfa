@@ -31,7 +31,7 @@
   "inbounds": [
     {
       "type": "tun",
-      "address": ["172.19.0.1/30"],
+      "address": "172.19.0.1/30",
       "auto_route": true
     }
   ],
@@ -41,9 +41,9 @@
       "type": "urltest",
       "outbounds": ["01 - 🇩🇪", "02 - 🇩🇪", "03 - 🇩🇪", "04 - 🇩🇪", "05 - 🇳🇱", "06 - 🇳🇱", "07 - 🇫🇷"],
       "url": "http://captive.apple.com/hotspot-detect.html",
-      "interval": "1h",
-      "idle_timeout": "1h",
-      "tolerance": 0
+      "interval": "1h0m0s",
+      "idle_timeout": "1h0m0s",
+      "tolerance": 1
     },
     {
       "tag": "01 - 🇩🇪",
