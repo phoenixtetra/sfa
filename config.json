@@ -42,7 +42,8 @@
       "outbounds": ["01 - 🇩🇪", "02 - 🇩🇪", "03 - 🇩🇪", "04 - 🇩🇪", "05 - 🇳🇱", "06 - 🇳🇱", "07 - 🇫🇷"],
       "url": "http://captive.apple.com/hotspot-detect.html",
       "interval": "1h",
-      "idle_timeout": "1h"
+      "idle_timeout": "1h",
+      "tolerance": 0
     },
     {
       "tag": "01 - 🇩🇪",
