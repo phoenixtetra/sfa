@@ -6,7 +6,7 @@
     "servers": [
       {
         "tag": "cloudflare",
-        "type": "tcp",
+        "type": "udp",
         "server": "1.0.0.1",
         "detour": "auto"
       },
@@ -39,11 +39,10 @@
     {
       "tag": "auto",
       "type": "urltest",
-      "outbounds": ["01 - 🇩🇪", "02 - 🇩🇪", "03 - 🇩🇪", "04 - 🇩🇪", "05 - 🇳🇱", "06 - 🇳🇱", "07 - 🇫🇷"],
+      "outbounds": ["01 - 🇩🇪", "02 - 🇩🇪", "03 - 🇫🇷", "04 - 🇩🇪", "05 - 🇩🇪", "06 - 🇳🇱", "07 - 🇳🇱"],
       "url": "http://captive.apple.com/hotspot-detect.html",
       "interval": "1h0m0s",
-      "idle_timeout": "1h0m0s",
-      "tolerance": 1
+      "idle_timeout": "1h0m0s"
     },
     {
       "tag": "01 - 🇩🇪",
@@ -62,11 +61,16 @@
       "password": "amazonskr05"
     },
     {
-      "tag": "03 - 🇩🇪",
-      "type": "vless",
-      "server": "3.124.227.195",
-      "server_port": 22224,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+      "tag": "03 - 🇫🇷",
+      "type": "vmess",
+      "server": "2001:bc8:32d7:1a9::2",
+      "server_port": 23388,
+      "uuid": "3a966d20-7b9d-48cc-ba2c-8d38161b6d3a",
+      "transport": {
+        "type": "ws",
+        "path": "/github.com/Alvin9999-newpac/fanqiang",
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
     },
     {
       "tag": "04 - 🇩🇪",
@@ -91,7 +95,22 @@
       }
     },
     {
-      "tag": "05 - 🇳🇱",
+      "tag": "05 - 🇩🇪",
+      "type": "vless",
+      "server": "3.124.227.195",
+      "server_port": 22224,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "tag": "06 - 🇳🇱",
+      "type": "shadowsocks",
+      "server": "108.181.58.239",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CJmTCCx7Ltud"
+    },
+    {
+      "tag": "07 - 🇳🇱",
       "type": "vless",
       "server": "95.38.102.243",
       "server_port": 4443,
@@ -112,26 +131,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-service"
-      }
-    },
-    {
-      "tag": "06 - 🇳🇱",
-      "type": "shadowsocks",
-      "server": "108.181.58.239",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "CJmTCCx7Ltud"
-    },
-    {
-      "tag": "07 - 🇫🇷",
-      "type": "vmess",
-      "server": "2001:bc8:32d7:1a9::2",
-      "server_port": 23388,
-      "uuid": "3a966d20-7b9d-48cc-ba2c-8d38161b6d3a",
-      "transport": {
-        "type": "ws",
-        "path": "/github.com/Alvin9999-newpac/fanqiang",
-        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
