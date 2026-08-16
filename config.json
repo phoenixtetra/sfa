@@ -41,7 +41,7 @@
       "type": "urltest",
       "outbounds": ["[1] 🇩🇪", "[2] 🇹🇷", "[3] 🇳🇱", "[4] 🇩🇪"],
       "url": "http://cp.cloudflare.com/generate_204",
-      "interval": "30"
+      "interval": "30m"
     },
     {
       "tag": "[1] 🇩🇪",
