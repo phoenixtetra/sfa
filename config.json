@@ -8,7 +8,7 @@
         "tag": "cloudflare",
         "type": "tcp",
         "server": "1.0.0.1",
-        "detour": "proxy"
+        "detour": "auto"
       },
       {
         "tag": "local",
@@ -37,9 +37,48 @@
   ],
   "outbounds": [
     {
-      "tag": "proxy",
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": ["[1] 🇩🇪", "[2] 🇹🇷", "[3] 🇳🇱", "[4] 🇩🇪"],
+      "url": "http://cp.cloudflare.com/generate_204",
+      "interval": "30"
+    },
+    {
+      "tag": "[1] 🇩🇪",
       "type": "shadowsocks",
       "server": "51.102.205.132",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "[2] 🇹🇷",
+      "type": "hysteria2",
+      "server": "198.105.123.106",
+      "server_port": 11504,
+      "password": "@Tel@Configvibes",
+      "obfs": {
+        "type": "salamander",
+        "password": "Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------"
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "archive.ubuntu.com",
+        "insecure": true
+      }
+    },
+    {
+      "tag": "[3] 🇳🇱",
+      "type": "shadowsocks",
+      "server": "108.181.58.239",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CJmTCCx7Ltud"
+    },
+    {
+      "tag": "[4] 🇩🇪",
+      "type": "shadowsocks",
+      "server": "3.76.30.105",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
@@ -110,6 +149,9 @@
     "cache_file": {
       "enabled": true,
       "path": "cache.db"
+    },
+    "clash_api": {
+      "default_mode": "Enhanced"
     }
   }
 }
