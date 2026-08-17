@@ -22,7 +22,7 @@
         "action": "reject"
       },
       {
-        "rule_set": ["geosite-ir", "whitelist"],
+        "rule_set": "geosite-ir",
         "server": "local"
       }
     ],
