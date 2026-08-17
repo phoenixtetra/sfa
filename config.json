@@ -39,7 +39,7 @@
     {
       "tag": "auto",
       "type": "urltest",
-      "outbounds": ["[1] 🇹🇷", "[2] 🇹🇷", "[3] 🇹🇷", "[4] 🇩🇪", "[5] 🇹🇷", "[6] 🇩🇪", "[7] 🇳🇱"],
+      "outbounds": ["[1] 🇹🇷", "[2] 🇹🇷", "[3] 🇹🇷", "[4] 🇩🇪", "[5] 🇳🇱", "[6] 🇹🇷", "[7] 🇩🇪", "[8] 🇳🇱"],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "30m"
     },
@@ -100,7 +100,18 @@
       "password": "amazonskr05"
     },
     {
-      "tag": "[5] 🇹🇷",
+      "tag": "[5] 🇳🇱",
+      "type": "vless",
+      "server": "66.33.22.220",
+      "server_port": 46257,
+      "uuid": "847fa891-534c-4cf2-8efd-543843b69b13",
+      "transport": {
+        "type": "grpc",
+        "service_name": "serviceName"
+      }
+    },
+    {
+      "tag": "[6] 🇹🇷",
       "type": "vless",
       "server": "87.120.106.140",
       "server_port": 61555,
@@ -120,7 +131,7 @@
       }
     },
     {
-      "tag": "[6] 🇩🇪",
+      "tag": "[7] 🇩🇪",
       "type": "shadowsocks",
       "server": "3.76.30.105",
       "server_port": 443,
@@ -128,7 +139,7 @@
       "password": "amazonskr05"
     },
     {
-      "tag": "[7] 🇳🇱",
+      "tag": "[8] 🇳🇱",
       "type": "shadowsocks",
       "server": "108.181.58.239",
       "server_port": 8388,
