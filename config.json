@@ -135,11 +135,6 @@
         "type": "remote",
         "tag": "geoip-ir",
         "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geoip-ir.srs"
-      },
-      {
-        "type": "local",
-        "tag": "whitelist",
-        "path": "/etc/sing-box/whitelist.json"
       }
     ],
     "default_domain_resolver": "cloudflare",
