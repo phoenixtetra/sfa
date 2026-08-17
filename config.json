@@ -8,7 +8,7 @@
         "tag": "cloudflare",
         "type": "tcp",
         "server": "1.0.0.1",
-        "detour": "auto"
+        "detour": "proxy"
       },
       {
         "tag": "local",
@@ -37,114 +37,12 @@
   ],
   "outbounds": [
     {
-      "tag": "auto",
-      "type": "urltest",
-      "outbounds": ["[1] 🇹🇷", "[2] 🇹🇷", "[3] 🇹🇷", "[4] 🇩🇪", "[5] 🇳🇱", "[6] 🇹🇷", "[7] 🇩🇪", "[8] 🇳🇱"],
-      "url": "http://cp.cloudflare.com/generate_204",
-      "interval": "30m"
-    },
-    {
-      "tag": "[1] 🇹🇷",
-      "type": "vless",
-      "server": "103.83.87.238",
-      "server_port": 443,
-      "uuid": "670decfe-68cc-499e-8cb1-22b39c20acbb",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "tur4.helper-internet.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE",
-          "short_id": "ff776ff77be48b88"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "[2] 🇹🇷",
-      "type": "vmess",
-      "server": "193.111.78.106",
-      "server_port": 58304,
-      "uuid": "26b6fd32-04e6-43ff-a065-bea36f748655",
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
-      "tag": "[3] 🇹🇷",
-      "type": "hysteria2",
-      "server": "198.105.123.106",
-      "server_port": 11504,
-      "password": "@Tel@Configvibes",
-      "obfs": {
-        "type": "salamander",
-        "password": "Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------"
-      },
-      "tls": {
-        "enabled": true,
-        "server_name": "archive.ubuntu.com",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "[4] 🇩🇪",
+      "tag": "proxy",
       "type": "shadowsocks",
       "server": "51.102.205.132",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
-    },
-    {
-      "tag": "[5] 🇳🇱",
-      "type": "vless",
-      "server": "66.33.22.220",
-      "server_port": 46257,
-      "uuid": "847fa891-534c-4cf2-8efd-543843b69b13",
-      "transport": {
-        "type": "grpc",
-        "service_name": "serviceName"
-      }
-    },
-    {
-      "tag": "[6] 🇹🇷",
-      "type": "vless",
-      "server": "87.120.106.140",
-      "server_port": 61555,
-      "uuid": "c00dfa61-737b-4f70-94c3-120bf98d8160",
-      "tls": {
-        "enabled": true,
-        "server_name": "play.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "sQFf0v_2dbbqa6Ey6yz8qeG8wmF2VPD1YyqIkG7NPT4",
-          "short_id": "71efcf4d101327c1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "[7] 🇩🇪",
-      "type": "shadowsocks",
-      "server": "3.76.30.105",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "[8] 🇳🇱",
-      "type": "shadowsocks",
-      "server": "108.181.58.239",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "CJmTCCx7Ltud"
     },
     {
       "tag": "direct",
@@ -207,9 +105,6 @@
     "cache_file": {
       "enabled": true,
       "path": "cache.db"
-    },
-    "clash_api": {
-      "default_mode": "Enhanced"
     }
   }
 }
