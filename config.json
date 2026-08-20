@@ -39,10 +39,10 @@
     {
       "tag": "proxy",
       "type": "shadowsocks",
-      "server": "51.102.205.132",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "server": "108.181.58.239",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CJmTCCx7Ltud"
     },
     {
       "tag": "direct",
