@@ -38,11 +38,10 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "type": "shadowsocks",
-      "server": "108.181.58.239",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "CJmTCCx7Ltud"
+      "type": "vless",
+      "server": "3.78.22.74",
+      "server_port": 22224,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
     {
       "tag": "direct",
@@ -66,9 +65,16 @@
         "type": "logical",
         "mode": "or",
         "rules": [
-          { "port": 853 },
-          { "network": "udp", "port": 443 },
-          { "protocol": "stun" }
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol": "stun"
+          }
         ],
         "action": "reject"
       },
@@ -77,7 +83,10 @@
         "action": "reject"
       },
       {
-        "rule_set": ["geosite-ir", "geoip-ir"],
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
         "outbound": "direct"
       }
     ],
