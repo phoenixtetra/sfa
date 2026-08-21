@@ -38,10 +38,14 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "type": "vless",
-      "server": "3.78.22.74",
-      "server_port": 22224,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+      "type": "vmess",
+      "server": "176.120.17.21",
+      "server_port": 1015,
+      "uuid": "43531b5b-d94b-49ba-8a5e-7a6d4bb68459",
+      "tls": {
+        "enabled": true,
+        "server_name": "astra.iraniangamersclub.ir"
+      }
     },
     {
       "tag": "direct",
