@@ -42,7 +42,9 @@
       "outbounds": [
         "[1] 🇳🇱",
         "[2] 🇳🇱",
-        "[3] 🇫🇷"
+        "[3] 🇫🇷",
+        "[4] 🇵🇱",
+        "[5] 🇩🇪"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
@@ -74,6 +76,42 @@
         "type": "ws",
         "path": "/github.com/Alvin9999-newpac/fanqiang",
         "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "tag": "[4] 🇵🇱",
+      "type": "vless",
+      "server": "31.56.188.179",
+      "server_port": 8443,
+      "uuid": "afa92127-9235-4f03-9663-5eaef3f3d7bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UuEiv2T1QFnZA1IYb3is-th-eMCFFVENl6M3IGXZ9zs",
+          "short_id": "6e3df2765ab89224"
+        }
+      }
+    },
+    {
+      "tag": "[5] 🇩🇪",
+      "type": "hysteria2",
+      "server": "31.76.27.23",
+      "server_port": 37009,
+      "password": "Telegram@vpnjey",
+      "obfs": {
+        "type": "salamander",
+        "password": "Telegram@vpnjey"
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "de.vpnjey.store",
+        "insecure": true
       }
     },
     {
