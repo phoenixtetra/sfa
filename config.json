@@ -38,11 +38,10 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "type": "shadowsocks",
-      "server": "108.181.58.239",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "CJmTCCx7Ltud"
+      "type": "vless",
+      "server": "134.98.158.147",
+      "server_port": 62145,
+      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
     },
     {
       "tag": "direct",
