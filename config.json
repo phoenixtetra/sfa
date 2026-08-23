@@ -40,11 +40,22 @@
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "[1] 🇳🇱",
-        "[2] 🇳🇱",
-        "[3] 🇫🇷",
-        "[4] 🇵🇱",
-        "[5] 🇩🇪"
+        "[01] 🇩🇪",
+        "[02] 🇳🇱",
+        "[03] 🇫🇷",
+        "[04] 🇵🇱",
+        "[05] 🇩🇪",
+        "[06] 🇬🇧",
+        "[07] 🇳🇱",
+        "[08] 🇳🇱",
+        "[09] 🇳🇱",
+        "[10] 🇩🇪",
+        "[11] 🇳🇱",
+        "[12] 🇨🇭",
+        "[13] 🇩🇪",
+        "[14] 🇩🇪",
+        "[15] 🇹🇷",
+        "[16] 🇩🇪"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
@@ -52,14 +63,23 @@
       "tolerance": 20
     },
     {
-      "tag": "[1] 🇳🇱",
-      "type": "vless",
-      "server": "134.98.158.147",
-      "server_port": 62145,
-      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      "tag": "[01] 🇩🇪",
+      "type": "hysteria2",
+      "server": "45.128.99.14",
+      "server_port": 8443,
+      "password": "Germany2026hy",
+      "obfs": {
+        "type": "salamander",
+        "password": "SalamanderDE2026"
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "de.nobelchat.ru",
+        "insecure": true
+      }
     },
     {
-      "tag": "[2] 🇳🇱",
+      "tag": "[02] 🇳🇱",
       "type": "shadowsocks",
       "server": "108.181.58.239",
       "server_port": 8388,
@@ -67,7 +87,7 @@
       "password": "CJmTCCx7Ltud"
     },
     {
-      "tag": "[3] 🇫🇷",
+      "tag": "[03] 🇫🇷",
       "type": "vmess",
       "server": "2001:bc8:32d7:1a9::2",
       "server_port": 23388,
@@ -79,7 +99,7 @@
       }
     },
     {
-      "tag": "[4] 🇵🇱",
+      "tag": "[04] 🇵🇱",
       "type": "vless",
       "server": "31.56.188.179",
       "server_port": 8443,
@@ -99,7 +119,7 @@
       }
     },
     {
-      "tag": "[5] 🇩🇪",
+      "tag": "[05] 🇩🇪",
       "type": "hysteria2",
       "server": "31.76.27.23",
       "server_port": 37009,
@@ -112,6 +132,157 @@
         "enabled": true,
         "server_name": "de.vpnjey.store",
         "insecure": true
+      }
+    },
+    {
+      "tag": "[06] 🇬🇧",
+      "type": "vless",
+      "server": "169.197.113.179",
+      "server_port": 20190,
+      "uuid": "ad4dd89a-2e4b-4f33-bb96-7e9c4eb85d0b"
+    },
+    {
+      "tag": "[07] 🇳🇱",
+      "type": "shadowsocks",
+      "server": "134.98.144.146",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "mSsDylEWEVs4RJudck4O0ScHhezXB9RZs9N70l5esqM="
+    },
+    {
+      "tag": "[08] 🇳🇱",
+      "type": "vless",
+      "server": "92.5.227.75",
+      "server_port": 62145,
+      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+    },
+    {
+      "tag": "[09] 🇳🇱",
+      "type": "shadowsocks",
+      "server": "193.29.139.212",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "tag": "[10] 🇩🇪",
+      "type": "shadowsocks",
+      "server": "144.31.168.176",
+      "server_port": 45640,
+      "method": "chacha20-ietf-poly1305",
+      "password": "eQvKkykBEbCky5p4BVghO0"
+    },
+    {
+      "tag": "[11] 🇳🇱",
+      "type": "vmess",
+      "server": "176.120.17.21",
+      "server_port": 1015,
+      "uuid": "7c1e62c4-b423-4d1e-a618-304e21a568fe",
+      "tls": {
+        "enabled": true,
+        "server_name": "astra.iraniangamersclub.ir"
+      }
+    },
+    {
+      "tag": "[12] 🇨🇭",
+      "type": "vless",
+      "server": "132.243.174.112",
+      "server_port": 2054,
+      "uuid": "25d18f6f-f701-4da1-93d8-ec712f05963b",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.swisscom.ch",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "JFzd2AbfzZSnMefyKEXNIae_QEZAo5o239pmuHHZsAY",
+          "short_id": "b27b172e7453e810"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "[13] 🇩🇪",
+      "type": "vless",
+      "server": "162.35.231.137",
+      "server_port": 443,
+      "uuid": "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb",
+      "tls": {
+        "enabled": true,
+        "server_name": "savesafe.co",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "6z3YcVP0f2pK3iANKIkBUZOgNeErDjxY83mHZG5jrnI",
+          "short_id": "f63805c3ecc7a483"
+        }
+      }
+    },
+    {
+      "tag": "[14] 🇩🇪",
+      "type": "vless",
+      "server": "185.140.12.160",
+      "server_port": 2083,
+      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "derman.neobo-tooth.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "[15] 🇹🇷",
+      "type": "vless",
+      "server": "143.246.136.78",
+      "server_port": 443,
+      "uuid": "ac7fb60f-0b7a-465d-a002-05160ec04ed6",
+      "tls": {
+        "enabled": true,
+        "server_name": "wok1.api3-max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "[16] 🇩🇪",
+      "type": "vless",
+      "server": "5.175.161.47",
+      "server_port": 8443,
+      "uuid": "eb85f61f-acb3-4689-8b7c-d8ad2a6aa43f",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "6hrP_JlRUK40WwXk9ZL0FpB19bTR0RnrUGYX5SaZkCE",
+          "short_id": "0501b478da6a4950"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
