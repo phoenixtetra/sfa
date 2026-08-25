@@ -43,19 +43,18 @@
         "[01] 🇩🇪",
         "[02] 🇳🇱",
         "[03] 🇫🇷",
-        "[04] 🇵🇱",
-        "[05] 🇩🇪",
-        "[06] 🇬🇧",
-        "[07] 🇳🇱",
+        "[04] 🇫🇷",
+        "[05] 🇳🇱",
+        "[06] 🇳🇱",
+        "[07] 🇩🇪",
         "[08] 🇳🇱",
-        "[09] 🇳🇱",
-        "[10] 🇩🇪",
-        "[11] 🇳🇱",
-        "[12] 🇨🇭",
+        "[09] 🇱🇹",
+        "[10] 🇱🇻",
+        "[11] 🇬🇧",
+        "[12] 🇩🇪",
         "[13] 🇩🇪",
         "[14] 🇩🇪",
-        "[15] 🇹🇷",
-        "[16] 🇩🇪"
+        "[15] 🇳🇱"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
@@ -80,11 +79,19 @@
     },
     {
       "tag": "[02] 🇳🇱",
-      "type": "shadowsocks",
-      "server": "108.181.58.239",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "CJmTCCx7Ltud"
+      "type": "hysteria2",
+      "server": "147.45.149.88",
+      "server_port": 8443,
+      "password": "NL2026hy",
+      "obfs": {
+        "type": "salamander",
+        "password": "SalamanderNL2026"
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "nl.nobelchat.ru",
+        "insecure": true
+      }
     },
     {
       "tag": "[03] 🇫🇷",
@@ -99,27 +106,34 @@
       }
     },
     {
-      "tag": "[04] 🇵🇱",
-      "type": "vless",
-      "server": "31.56.188.179",
-      "server_port": 8443,
-      "uuid": "afa92127-9235-4f03-9663-5eaef3f3d7bb",
+      "tag": "[04] 🇫🇷",
+      "type": "shadowsocks",
+      "server": "141.253.107.174",
+      "server_port": 22345,
+      "method": "chacha20-ietf-poly1305",
+      "password": "be6cbb46-ebb0-4726-9202-6a3bac1d0afb"
+    },
+    {
+      "tag": "[05] 🇳🇱",
+      "type": "vmess",
+      "server": "176.120.17.21",
+      "server_port": 1015,
+      "uuid": "4294d991-9369-468a-af1d-799e8e12bf74",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "UuEiv2T1QFnZA1IYb3is-th-eMCFFVENl6M3IGXZ9zs",
-          "short_id": "6e3df2765ab89224"
-        }
+        "server_name": "astra.iraniangamersclub.ir"
       }
     },
     {
-      "tag": "[05] 🇩🇪",
+      "tag": "[06] 🇳🇱",
+      "type": "shadowsocks",
+      "server": "108.181.58.239",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CJmTCCx7Ltud"
+    },
+    {
+      "tag": "[07] 🇩🇪",
       "type": "hysteria2",
       "server": "31.76.27.23",
       "server_port": 37009,
@@ -135,71 +149,65 @@
       }
     },
     {
-      "tag": "[06] 🇬🇧",
+      "tag": "[08] 🇳🇱",
+      "type": "vless",
+      "server": "95.85.248.50",
+      "server_port": 443,
+      "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
+      "tls": {
+        "enabled": true,
+        "server_name": "eu-west.cendora.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0",
+          "short_id": "dd3ff38418d29d22"
+        }
+      }
+    },
+    {
+      "tag": "[09] 🇱🇹",
+      "type": "shadowsocks",
+      "server": "195.238.126.20",
+      "server_port": 9002,
+      "method": "aes-256-cfb",
+      "password": "b8KkNDjEd5QqFyRm"
+    },
+    {
+      "tag": "[10] 🇱🇻",
+      "type": "shadowsocks",
+      "server": "185.135.86.175",
+      "server_port": 9082,
+      "method": "aes-256-cfb",
+      "password": "45xgMgm386pjWjTx"
+    },
+    {
+      "tag": "[11] 🇬🇧",
       "type": "vless",
       "server": "169.197.113.179",
       "server_port": 20190,
       "uuid": "ad4dd89a-2e4b-4f33-bb96-7e9c4eb85d0b"
     },
     {
-      "tag": "[07] 🇳🇱",
-      "type": "shadowsocks",
-      "server": "134.98.144.146",
-      "server_port": 45819,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "mSsDylEWEVs4RJudck4O0ScHhezXB9RZs9N70l5esqM="
-    },
-    {
-      "tag": "[08] 🇳🇱",
+      "tag": "[12] 🇩🇪",
       "type": "vless",
-      "server": "92.5.227.75",
-      "server_port": 62145,
-      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
-    },
-    {
-      "tag": "[09] 🇳🇱",
-      "type": "shadowsocks",
-      "server": "193.29.139.212",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "QCXDxuDlTTMD7jtgHUjIoj"
-    },
-    {
-      "tag": "[10] 🇩🇪",
-      "type": "shadowsocks",
-      "server": "144.31.168.176",
-      "server_port": 45640,
-      "method": "chacha20-ietf-poly1305",
-      "password": "eQvKkykBEbCky5p4BVghO0"
-    },
-    {
-      "tag": "[11] 🇳🇱",
-      "type": "vmess",
-      "server": "176.120.17.21",
-      "server_port": 1015,
-      "uuid": "7c1e62c4-b423-4d1e-a618-304e21a568fe",
+      "server": "185.246.191.135",
+      "server_port": 2053,
+      "uuid": "203c2146-6620-4a5e-836c-7af5c75c9325",
       "tls": {
         "enabled": true,
-        "server_name": "astra.iraniangamersclub.ir"
-      }
-    },
-    {
-      "tag": "[12] 🇨🇭",
-      "type": "vless",
-      "server": "132.243.174.112",
-      "server_port": 2054,
-      "uuid": "25d18f6f-f701-4da1-93d8-ec712f05963b",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.swisscom.ch",
+        "server_name": "www.intel.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "JFzd2AbfzZSnMefyKEXNIae_QEZAo5o239pmuHHZsAY",
-          "short_id": "b27b172e7453e810"
+          "public_key": "7zv-3bWzr0wwe4vy1Z_35V-cLXjH07cSRuOw8tcX4wk",
+          "short_id": "9c"
         }
       },
       "transport": {
@@ -209,26 +217,6 @@
     },
     {
       "tag": "[13] 🇩🇪",
-      "type": "vless",
-      "server": "162.35.231.137",
-      "server_port": 443,
-      "uuid": "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb",
-      "tls": {
-        "enabled": true,
-        "server_name": "savesafe.co",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "6z3YcVP0f2pK3iANKIkBUZOgNeErDjxY83mHZG5jrnI",
-          "short_id": "f63805c3ecc7a483"
-        }
-      }
-    },
-    {
-      "tag": "[14] 🇩🇪",
       "type": "vless",
       "server": "185.140.12.160",
       "server_port": 2083,
@@ -247,42 +235,39 @@
       }
     },
     {
-      "tag": "[15] 🇹🇷",
-      "type": "vless",
-      "server": "143.246.136.78",
-      "server_port": 443,
-      "uuid": "ac7fb60f-0b7a-465d-a002-05160ec04ed6",
+      "tag": "[14] 🇩🇪",
+      "type": "hysteria2",
+      "server": "31.76.27.23",
+      "server_port": 37009,
+      "password": "Telegram@vpnjey",
+      "obfs": {
+        "type": "salamander",
+        "password": "NL2026hy"
+      },
       "tls": {
         "enabled": true,
-        "server_name": "wok1.api3-max.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "server_name": "de.vpnjey.store",
+        "insecure": true
       }
     },
     {
-      "tag": "[16] 🇩🇪",
+      "tag": "[15] 🇳🇱",
       "type": "vless",
-      "server": "5.175.161.47",
-      "server_port": 8443,
-      "uuid": "eb85f61f-acb3-4689-8b7c-d8ad2a6aa43f",
+      "server": "45.91.202.73",
+      "server_port": 443,
+      "uuid": "1f619326-cd93-4d6b-aebe-e0b5f8831d02",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "server_name": "yahoo.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "6hrP_JlRUK40WwXk9ZL0FpB19bTR0RnrUGYX5SaZkCE",
-          "short_id": "0501b478da6a4950"
+          "public_key": "XZa7f7bABj7lY4HuLopVCBBBYTu-RB7QyIZ96njvYwo",
+          "short_id": "7bcfc0bc"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
