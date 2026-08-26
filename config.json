@@ -44,7 +44,8 @@
         "[02] 🇫🇷",
         "[03] 🇱🇻",
         "[04] 🇳🇱",
-        "[05] 🇩🇪"
+        "[05] 🇩🇪",
+        "[06] 🇸🇪"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
@@ -112,6 +113,22 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "[06] 🇸🇪",
+      "type": "hysteria2",
+      "server": "77.110.96.201",
+      "server_port": 36264,
+      "password": "Telegram@vpnjey",
+      "obfs": {
+        "type": "salamander",
+        "password": "Telegram@vpnjey"
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "se.vpnjey2.dpdns.org",
+        "insecure": true
       }
     },
     {
