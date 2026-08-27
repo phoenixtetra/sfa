@@ -49,8 +49,7 @@
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
-      "idle_timeout": "1h",
-      "tolerance": 20
+      "idle_timeout": "1h"
     },
     {
       "tag": "[01] 🇱🇻",
