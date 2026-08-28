@@ -40,19 +40,31 @@
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "[01] 🇱🇻",
-        "[02] 🇩🇪",
-        "[03] 🇫🇷",
-        "[04] 🇳🇱",
-        "[05] 🇩🇪",
-        "[06] 🇸🇪"
+        "[01] 🇩🇪",
+        "[02] 🇱🇻",
+        "[03] 🇳🇱",
+        "[04] 🇩🇪",
+        "[05] 🇫🇷",
+        "[06] 🇳🇱",
+        "[07] 🇬🇧",
+        "[08] 🇩🇪",
+        "[09] 🇩🇪",
+        "[10] 🇸🇪"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
       "idle_timeout": "1h"
     },
     {
-      "tag": "[01] 🇱🇻",
+      "tag": "[01] 🇩🇪",
+      "type": "shadowsocks",
+      "server": "130.61.41.69",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "Vb8fwksl70rXmSYAWCEPXRYbYmNhwF+vle+qbaKbDe4="
+    },
+    {
+      "tag": "[02] 🇱🇻",
       "type": "shadowsocks",
       "server": "185.135.86.175",
       "server_port": 9082,
@@ -60,7 +72,15 @@
       "password": "45xgMgm386pjWjTx"
     },
     {
-      "tag": "[02] 🇩🇪",
+      "tag": "[03] 🇳🇱",
+      "type": "shadowsocks",
+      "server": "141.148.241.211",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "k//4bvSvtf5XFTJVWWSaOHAr/631ZWJzHo4vSOObpQU="
+    },
+    {
+      "tag": "[04] 🇩🇪",
       "type": "hysteria2",
       "server": "31.76.27.23",
       "server_port": 37009,
@@ -76,7 +96,7 @@
       }
     },
     {
-      "tag": "[03] 🇫🇷",
+      "tag": "[05] 🇫🇷",
       "type": "vmess",
       "server": "2001:bc8:32d7:1a9::2",
       "server_port": 23388,
@@ -88,7 +108,7 @@
       }
     },
     {
-      "tag": "[04] 🇳🇱",
+      "tag": "[06] 🇳🇱",
       "type": "shadowsocks",
       "server": "108.181.58.239",
       "server_port": 8388,
@@ -96,7 +116,25 @@
       "password": "CJmTCCx7Ltud"
     },
     {
-      "tag": "[05] 🇩🇪",
+      "tag": "[07] 🇬🇧",
+      "type": "vless",
+      "server": "18.133.19.17",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "tag": "[08] 🇩🇪",
+      "type": "vmess",
+      "server": "31.172.83.109",
+      "server_port": 45147,
+      "uuid": "0e93e9ce-3f14-4923-b880-fdc15e15900f",
+      "transport": {
+        "type": "http",
+        "path": "/"
+      }
+    },
+    {
+      "tag": "[09] 🇩🇪",
       "type": "vless",
       "server": "185.140.12.160",
       "server_port": 2083,
@@ -115,7 +153,7 @@
       }
     },
     {
-      "tag": "[06] 🇸🇪",
+      "tag": "[10] 🇸🇪",
       "type": "hysteria2",
       "server": "77.110.96.201",
       "server_port": 36264,
