@@ -1,33 +1,38 @@
 {
+  "$schema": "https://sing-box.sagernet.org/schema.json",
   "log": {
-    "level": "error"
+    "level": "warn"
   },
   "dns": {
     "servers": [
       {
-        "tag": "cloudflare",
-        "type": "tcp",
-        "server": "1.0.0.1",
+        "tag": "remote",
+        "type": "udp",
+        "server": "1.1.1.1",
         "detour": "proxy"
       },
       {
         "tag": "local",
-        "type": "udp",
-        "server": "78.157.42.100"
+        "type": "local"
       }
     ],
     "rules": [
-      {
-        "query_type": "HTTPS",
-        "action": "reject"
-      },
       {
         "rule_set": "geosite-ir",
         "server": "local"
       }
     ],
+    "optimistic": {
+      "enabled": true
+    },
     "strategy": "ipv4_only"
   },
+  "http_clients": [
+    {
+      "tag": "proxy",
+      "detour": "proxy"
+    }
+  ],
   "inbounds": [
     {
       "type": "tun",
@@ -38,11 +43,39 @@
   "outbounds": [
     {
       "tag": "proxy",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇧🇬 [01]",
+        "🇮🇹 [02]"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇧🇬 [01]",
+        "🇮🇹 [02]"
+      ],
+      "url": "http://cp.cloudflare.com/generate_204",
+      "interval": "1h",
+      "idle_timeout": "1h"
+    },
+    {
+      "tag": "🇧🇬 [01]",
       "type": "shadowsocks",
       "server": "213.183.63.60",
       "server_port": 9028,
       "method": "aes-256-cfb",
       "password": "9eeJ2fwnZA5Fxgz8"
+    },
+    {
+      "tag": "🇮🇹 [02]",
+      "type": "shadowsocks",
+      "server": "132.243.255.3",
+      "server_port": 10661,
+      "method": "aes-256-gcm",
+      "password": "78235e7dc55e9ad1"
     },
     {
       "tag": "direct",
@@ -53,14 +86,6 @@
     "rules": [
       {
         "action": "sniff"
-      },
-      {
-        "protocol": "dns",
-        "action": "hijack-dns"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct"
       },
       {
         "type": "logical",
@@ -80,6 +105,11 @@
         "action": "reject"
       },
       {
+        "ip_is_private": true,
+        "action": "bypass",
+        "outbound": "direct"
+      },
+      {
         "rule_set": "geosite-category-ads-all",
         "action": "reject"
       },
@@ -88,32 +118,37 @@
           "geosite-ir",
           "geoip-ir"
         ],
+        "action": "bypass",
         "outbound": "direct"
       }
     ],
     "rule_set": [
       {
         "type": "remote",
-        "tag": "geosite-category-ads-all",
-        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-category-ads-all.srs"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-ir",
-        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-ir.srs"
-      },
-      {
-        "type": "remote",
-        "tag": "geoip-ir",
-        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geoip-ir.srs"
+        "tag": [
+          "geosite-ir",
+          "geoip-ir",
+          "geosite-category-ads-all"
+        ],
+        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/{tag}.srs"
       }
     ],
-    "default_domain_resolver": "cloudflare",
-    "auto_detect_interface": true
+    "auto_detect_interface": true,
+    "default_domain_resolver": "remote",
+    "default_http_client": "proxy"
   },
+  "services": [
+    {
+      "type": "api",
+      "listen": "127.0.0.1",
+      "listen_port": 8000,
+      "dashboard": true
+    }
+  ],
   "experimental": {
     "cache_file": {
       "enabled": true,
+      "store_dns": true,
       "path": "cache.db"
     }
   }
