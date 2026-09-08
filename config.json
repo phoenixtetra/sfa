@@ -46,36 +46,66 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "🇧🇬 [01]",
-        "🇮🇹 [02]"
+        "🇩🇪 [01]",
+        "🇺🇸 [02]",
+        "🇮🇹 [03]"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "🇧🇬 [01]",
-        "🇮🇹 [02]"
+        "🇩🇪 [01]",
+        "🇺🇸 [02]",
+        "🇮🇹 [03]"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
       "idle_timeout": "1h"
     },
     {
-      "tag": "🇧🇬 [01]",
-      "type": "shadowsocks",
-      "server": "213.183.63.60",
-      "server_port": 9028,
-      "method": "aes-256-cfb",
-      "password": "9eeJ2fwnZA5Fxgz8"
+      "tag": "🇩🇪 [01]",
+      "type": "hysteria2",
+      "server": "31.76.27.23",
+      "server_port": 37009,
+      "obfs": {
+        "type": "salamander",
+        "password": "Telegram@vpnjey"
+      },
+      "password": "Telegram:vpnjey",
+      "tls": {
+        "enabled": true,
+        "server_name": "de.vpnjey.store",
+        "insecure": true
+      }
     },
     {
-      "tag": "🇮🇹 [02]",
+      "tag": "🇺🇸 [02]",
+      "type": "vless",
+      "server": "194.55.189.249",
+      "server_port": 40443,
+      "uuid": "8212a50b-25bf-4739-bba1-aaffb5ffc84c",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo",
+          "short_id": "aae8"
+        }
+      }
+    },
+    {
+      "tag": "🇮🇹 [03]",
       "type": "shadowsocks",
-      "server": "132.243.255.3",
-      "server_port": 10661,
-      "method": "aes-256-gcm",
-      "password": "78235e7dc55e9ad1"
+      "server": "91.201.65.122",
+      "server_port": 9074,
+      "method": "aes-256-cfb",
+      "password": "p5wSkb2uM3pKSS3j"
     },
     {
       "tag": "direct",
