@@ -46,25 +46,60 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "🇩🇪 [01]",
-        "🇺🇸 [02]",
-        "🇮🇹 [03]"
+        "[01] 🇹🇷",
+        "[02] 🇩🇪",
+        "[03] 🇫🇷",
+        "[04] 🇩🇪",
+        "[05] 🇩🇪",
+        "[06] 🇮🇹"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "🇩🇪 [01]",
-        "🇺🇸 [02]",
-        "🇮🇹 [03]"
+        "[01] 🇹🇷",
+        "[02] 🇩🇪",
+        "[03] 🇫🇷",
+        "[04] 🇩🇪",
+        "[05] 🇩🇪",
+        "[06] 🇮🇹"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
       "idle_timeout": "1h"
     },
     {
-      "tag": "🇩🇪 [01]",
+      "tag": "[01] 🇹🇷",
+      "type": "vless",
+      "server": "185.71.219.188",
+      "server_port": 443,
+      "uuid": "2107ea1e-26fb-4831-8c3f-fb190bea79f7"
+    },
+    {
+      "tag": "[02] 🇩🇪",
+      "type": "shadowsocks",
+      "server": "179.61.138.73",
+      "server_port": 8444,
+      "method": "chacha20-ietf-poly1305",
+      "password": "tunnel-tg_astrovpn_official"
+    },
+    {
+      "tag": "[03] 🇫🇷",
+      "type": "vless",
+      "server": "13.36.253.48",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "tag": "[04] 🇩🇪",
+      "type": "vless",
+      "server": "91.107.179.8",
+      "server_port": 15003,
+      "uuid": "69d8dc73-20ff-4241-bdd8-a9d6d07553b6"
+    },
+    {
+      "tag": "[05] 🇩🇪",
       "type": "hysteria2",
       "server": "31.76.27.23",
       "server_port": 37009,
@@ -80,27 +115,7 @@
       }
     },
     {
-      "tag": "🇺🇸 [02]",
-      "type": "vless",
-      "server": "194.55.189.249",
-      "server_port": 40443,
-      "uuid": "8212a50b-25bf-4739-bba1-aaffb5ffc84c",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo",
-          "short_id": "aae8"
-        }
-      }
-    },
-    {
-      "tag": "🇮🇹 [03]",
+      "tag": "[06] 🇮🇹",
       "type": "shadowsocks",
       "server": "91.201.65.122",
       "server_port": 9074,
