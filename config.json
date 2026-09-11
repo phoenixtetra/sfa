@@ -46,34 +46,209 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "[01] 🇫🇷",
-        "[02] 🇮🇹",
+        "[01] 🇩🇪",
+        "[02] 🇩🇪",
         "[03] 🇩🇪",
-        "[04] 🇩🇪"
+        "[04] 🇩🇪",
+        "[05] 🇩🇪",
+        "[06] 🇩🇪",
+        "[07] 🇩🇪",
+        "[08] 🇩🇪",
+        "[09] 🇫🇷",
+        "[10] 🇮🇹",
+        "[11] 🇩🇪",
+        "[12] 🇩🇪"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "[01] 🇫🇷",
-        "[02] 🇮🇹",
+        "[01] 🇩🇪",
+        "[02] 🇩🇪",
         "[03] 🇩🇪",
-        "[04] 🇩🇪"
+        "[04] 🇩🇪",
+        "[05] 🇩🇪",
+        "[06] 🇩🇪",
+        "[07] 🇩🇪",
+        "[08] 🇩🇪",
+        "[09] 🇫🇷",
+        "[10] 🇮🇹",
+        "[11] 🇩🇪",
+        "[12] 🇩🇪"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
       "idle_timeout": "1h"
     },
     {
-      "tag": "[01] 🇫🇷",
+      "tag": "[01] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 8443,
+      "uuid": "cec7629d-85dc-4c82-b13a-39871515a8df",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[02] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 34115,
+      "uuid": "cec7629d-85dc-4c82-b13a-39871515a8df",
+      "tls": {
+        "enabled": true,
+        "server_name": "releases.hashicorp.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[03] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 32083,
+      "uuid": "cec7629d-85dc-4c82-b13a-39871515a8df",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.googleapis.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[04] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 34105,
+      "uuid": "cec7629d-85dc-4c82-b13a-39871515a8df",
+      "tls": {
+        "enabled": true,
+        "server_name": "archive.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[05] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 32096,
+      "uuid": "cec7629d-85dc-4c82-b13a-39871515a8df",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.cloudflare.steamstatic.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[06] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 34104,
+      "uuid": "cec7629d-85dc-4c82-b13a-39871515a8df",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.mysql.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[07] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 34111,
+      "uuid": "cec7629d-85dc-4c82-b13a-39871515a8df",
+      "tls": {
+        "enabled": true,
+        "server_name": "objects.githubusercontent.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[08] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 34109,
+      "uuid": "cec7629d-85dc-4c82-b13a-39871515a8df",
+      "tls": {
+        "enabled": true,
+        "server_name": "deb.debian.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[09] 🇫🇷",
       "type": "vless",
       "server": "13.39.117.250",
       "server_port": 22224,
       "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
     {
-      "tag": "[02] 🇮🇹",
+      "tag": "[10] 🇮🇹",
       "type": "shadowsocks",
       "server": "91.201.65.122",
       "server_port": 9074,
@@ -81,14 +256,14 @@
       "password": "p5wSkb2uM3pKSS3j"
     },
     {
-      "tag": "[03] 🇩🇪",
+      "tag": "[11] 🇩🇪",
       "type": "vless",
       "server": "91.107.179.8",
       "server_port": 15003,
       "uuid": "69d8dc73-20ff-4241-bdd8-a9d6d07553b6"
     },
     {
-      "tag": "[04] 🇩🇪",
+      "tag": "[12] 🇩🇪",
       "type": "hysteria2",
       "server": "31.76.27.23",
       "server_port": 37009,
