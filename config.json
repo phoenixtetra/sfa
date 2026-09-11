@@ -46,60 +46,49 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "[01] 🇹🇷",
-        "[02] 🇩🇪",
-        "[03] 🇫🇷",
-        "[04] 🇩🇪",
-        "[05] 🇩🇪",
-        "[06] 🇮🇹"
+        "[01] 🇫🇷",
+        "[02] 🇮🇹",
+        "[03] 🇩🇪",
+        "[04] 🇩🇪"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "[01] 🇹🇷",
-        "[02] 🇩🇪",
-        "[03] 🇫🇷",
-        "[04] 🇩🇪",
-        "[05] 🇩🇪",
-        "[06] 🇮🇹"
+        "[01] 🇫🇷",
+        "[02] 🇮🇹",
+        "[03] 🇩🇪",
+        "[04] 🇩🇪"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
       "idle_timeout": "1h"
     },
     {
-      "tag": "[01] 🇹🇷",
+      "tag": "[01] 🇫🇷",
       "type": "vless",
-      "server": "185.71.219.188",
-      "server_port": 443,
-      "uuid": "2107ea1e-26fb-4831-8c3f-fb190bea79f7"
-    },
-    {
-      "tag": "[02] 🇩🇪",
-      "type": "shadowsocks",
-      "server": "179.61.138.73",
-      "server_port": 8444,
-      "method": "chacha20-ietf-poly1305",
-      "password": "tunnel-tg_astrovpn_official"
-    },
-    {
-      "tag": "[03] 🇫🇷",
-      "type": "vless",
-      "server": "13.36.253.48",
-      "server_port": 22223,
+      "server": "13.39.117.250",
+      "server_port": 22224,
       "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
     {
-      "tag": "[04] 🇩🇪",
+      "tag": "[02] 🇮🇹",
+      "type": "shadowsocks",
+      "server": "91.201.65.122",
+      "server_port": 9074,
+      "method": "aes-256-cfb",
+      "password": "p5wSkb2uM3pKSS3j"
+    },
+    {
+      "tag": "[03] 🇩🇪",
       "type": "vless",
       "server": "91.107.179.8",
       "server_port": 15003,
       "uuid": "69d8dc73-20ff-4241-bdd8-a9d6d07553b6"
     },
     {
-      "tag": "[05] 🇩🇪",
+      "tag": "[04] 🇩🇪",
       "type": "hysteria2",
       "server": "31.76.27.23",
       "server_port": 37009,
@@ -113,14 +102,6 @@
         "server_name": "de.vpnjey.store",
         "insecure": true
       }
-    },
-    {
-      "tag": "[06] 🇮🇹",
-      "type": "shadowsocks",
-      "server": "91.201.65.122",
-      "server_port": 9074,
-      "method": "aes-256-cfb",
-      "password": "p5wSkb2uM3pKSS3j"
     },
     {
       "tag": "direct",
