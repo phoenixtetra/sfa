@@ -7,7 +7,7 @@
     "servers": [
       {
         "tag": "remote",
-        "type": "udp",
+        "type": "tcp",
         "server": "1.1.1.1",
         "detour": "proxy"
       },
@@ -47,13 +47,17 @@
       "outbounds": [
         "auto",
         "[1] 🇬🇧",
-        "[2] 🇬🇧",
-        "[3] 🇮🇪",
-        "[4] 🇳🇱",
-        "[5] 🇮🇹",
-        "[6] 🇫🇷",
+        "[2] 🇮🇹",
+        "[3] 🇫🇷",
+        "[4] 🇬🇧",
+        "[5] 🇩🇪",
+        "[6] 🇫🇮",
         "[7] 🇩🇪",
-        "[8] 🇩🇪"
+        "[8] 🇵🇱",
+        "[9] 🇫🇷",
+        "[10] 🇨🇦",
+        "Happ",
+        "direct"
       ]
     },
     {
@@ -61,13 +65,16 @@
       "type": "urltest",
       "outbounds": [
         "[1] 🇬🇧",
-        "[2] 🇬🇧",
-        "[3] 🇮🇪",
-        "[4] 🇳🇱",
-        "[5] 🇮🇹",
-        "[6] 🇫🇷",
+        "[2] 🇮🇹",
+        "[3] 🇫🇷",
+        "[4] 🇬🇧",
+        "[5] 🇩🇪",
+        "[6] 🇫🇮",
         "[7] 🇩🇪",
-        "[8] 🇩🇪"
+        "[8] 🇵🇱",
+        "[9] 🇫🇷",
+        "[10] 🇨🇦",
+        "Happ"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
@@ -76,80 +83,122 @@
     {
       "tag": "[1] 🇬🇧",
       "type": "shadowsocks",
-      "server": "18.170.35.229",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "[2] 🇬🇧",
-      "type": "shadowsocks",
       "server": "146.70.23.32",
       "server_port": 8080,
       "method": "rc4-md5",
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
-      "tag": "[3] 🇮🇪",
+      "tag": "[2] 🇮🇹",
       "type": "shadowsocks",
-      "server": "34.244.71.63",
+      "server": "91.201.65.122",
+      "server_port": 9059,
+      "method": "aes-256-cfb",
+      "password": "9XwYyZsK8SNzQDtY"
+    },
+    {
+      "tag": "[3] 🇫🇷",
+      "type": "vless",
+      "server": "15.224.194.93",
+      "server_port": 22222,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "tag": "[4] 🇬🇧",
+      "type": "vmess",
+      "server": "66.163.117.58",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto",
+      "authenticated_length": true
+    },
+    {
+      "tag": "[5] 🇩🇪",
+      "type": "shadowsocks",
+      "server": "3.120.158.57",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
     },
     {
-      "tag": "[4] 🇳🇱",
-      "type": "vless",
-      "server": "165.231.99.52",
-      "server_port": 8443,
-      "uuid": "6b03ffdd-6646-410b-b575-6c05eafdaf60",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vusr-6aa2cf2b.adhil.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "[5] 🇮🇹",
+      "tag": "[6] 🇫🇮",
       "type": "shadowsocks",
-      "server": "91.201.65.122",
-      "server_port": 9074,
-      "method": "aes-256-cfb",
-      "password": "p5wSkb2uM3pKSS3j"
-    },
-    {
-      "tag": "[6] 🇫🇷",
-      "type": "vless",
-      "server": "13.39.117.250",
-      "server_port": 22224,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+      "server": "87.58.148.70",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "rg0g3xp9rk9nk9o0"
     },
     {
       "tag": "[7] 🇩🇪",
       "type": "vless",
-      "server": "91.107.179.8",
-      "server_port": 15003,
-      "uuid": "69d8dc73-20ff-4241-bdd8-a9d6d07553b6"
-    },
-    {
-      "tag": "[8] 🇩🇪",
-      "type": "hysteria2",
-      "server": "31.76.27.23",
-      "server_port": 37009,
-      "obfs": {
-        "type": "salamander",
-        "password": "Telegram@vpnjey"
-      },
-      "password": "Telegram:vpnjey",
+      "server": "31.184.244.162",
+      "server_port": 2053,
+      "uuid": "60a361f9-3c45-4954-9e4c-92a85bda243d",
       "tls": {
         "enabled": true,
-        "server_name": "de.vpnjey.store",
-        "insecure": true
+        "server_name": "www.google.com",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY",
+          "short_id": "4881f8244d1b9021"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
+    },
+    {
+      "tag": "[8] 🇵🇱",
+      "type": "vless",
+      "server": "144.31.5.64",
+      "server_port": 443,
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl6.moritech.net",
+        "alpn": "h2"
+      }
+    },
+    {
+      "tag": "[9] 🇫🇷",
+      "type": "vless",
+      "server": "194.55.189.249",
+      "server_port": 40443,
+      "uuid": "8212a50b-25bf-4739-bba1-aaffb5ffc84c",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo",
+          "short_id": "aae8"
+        }
+      }
+    },
+    {
+      "tag": "[10] 🇨🇦",
+      "type": "shadowsocks",
+      "server": "51.222.155.113",
+      "server_port": 5601,
+      "method": "aes-256-gcm",
+      "password": "Y6R9pAtvxxzmGC"
+    },
+    {
+      "tag": "Happ",
+      "type": "http",
+      "server": "10.194.75.52",
+      "server_port": 10808
     },
     {
       "tag": "direct",
@@ -204,7 +253,7 @@
           "geoip-ir",
           "geosite-category-ads-all"
         ],
-        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/{tag}.srs"
+        "url": "https://github.com/Chocolate4U/Iran-sing-box-rules/raw/rule-set/{tag}.srs"
       }
     ],
     "auto_detect_interface": true,
