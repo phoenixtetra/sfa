@@ -55,7 +55,9 @@
         "[7] 🇩🇪",
         "[8] 🇵🇱",
         "[9] 🇫🇷",
-        "[10] 🇨🇦",
+        "[10] 🇩🇪",
+        "[11] 🇩🇪",
+        "[12] 🇨🇦",
         "Happ",
         "direct"
       ]
@@ -73,7 +75,9 @@
         "[7] 🇩🇪",
         "[8] 🇵🇱",
         "[9] 🇫🇷",
-        "[10] 🇨🇦",
+        "[10] 🇩🇪",
+        "[11] 🇩🇪",
+        "[12] 🇨🇦",
         "Happ"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
@@ -187,7 +191,35 @@
       }
     },
     {
-      "tag": "[10] 🇨🇦",
+      "tag": "[10] 🇩🇪",
+      "type": "vless",
+      "server": "144.225.65.177",
+      "server_port": 443,
+      "uuid": "443b2e33-8e9c-4f7b-a48a-383a93895d1e"
+    },
+    {
+      "tag": "[11] 🇩🇪",
+      "type": "vless",
+      "server": "91.196.34.154",
+      "server_port": 34115,
+      "uuid": "de2a1430-06e8-4f6c-b49f-a48ddb362a9b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "releases.hashicorp.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI",
+          "short_id": "b2c3f2c15f8f55b5"
+        }
+      }
+    },
+    {
+      "tag": "[12] 🇨🇦",
       "type": "shadowsocks",
       "server": "51.222.155.113",
       "server_port": 5601,
