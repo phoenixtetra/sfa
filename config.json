@@ -6,9 +6,9 @@
   "dns": {
     "servers": [
       {
-        "tag": "Quad9",
+        "tag": "Remote",
         "type": "udp",
-        "server": "9.9.9.10",
+        "server": "1.0.0.1",
         "detour": "Proxy"
       },
       {
@@ -46,28 +46,33 @@
       "type": "selector",
       "outbounds": [
         "Auto",
-        "[1] 🇫🇷",
-        "[2] 🇬🇧",
-        "[3] 🇬🇧",
-        "[4] 🇫🇮",
-        "[5] 🇵🇱",
-        "[6] 🇮🇹",
-        "[7] 🇨🇦",
+        "[1] 🇬🇧",
+        "[2] 🇮🇹",
+        "[3] 🇮🇹",
+        "[4] 🇳🇱",
+        "[5] 🇩🇪",
+        "[6] 🇸🇪",
+        "[7] 🇫🇮",
+        "[8] 🇨🇦",
+        "[9] 🇨🇦",
         "📱",
         "Direct"
-      ]
+      ],
+      "interrupt_exist_connections": true
     },
     {
       "tag": "Auto",
       "type": "urltest",
       "outbounds": [
-        "[1] 🇫🇷",
-        "[2] 🇬🇧",
-        "[3] 🇬🇧",
-        "[4] 🇫🇮",
-        "[5] 🇵🇱",
-        "[6] 🇮🇹",
-        "[7] 🇨🇦",
+        "[1] 🇬🇧",
+        "[2] 🇮🇹",
+        "[3] 🇮🇹",
+        "[4] 🇳🇱",
+        "[5] 🇩🇪",
+        "[6] 🇸🇪",
+        "[7] 🇫🇮",
+        "[8] 🇨🇦",
+        "[9] 🇨🇦",
         "📱"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
@@ -75,14 +80,7 @@
       "idle_timeout": "1h"
     },
     {
-      "tag": "[1] 🇫🇷",
-      "type": "vless",
-      "server": "35.181.77.1",
-      "server_port": 22224,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    },
-    {
-      "tag": "[2] 🇬🇧",
+      "tag": "[1] 🇬🇧",
       "type": "shadowsocks",
       "server": "146.70.23.32",
       "server_port": 8080,
@@ -90,55 +88,85 @@
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
-      "tag": "[3] 🇬🇧",
+      "tag": "[2] 🇮🇹",
+      "type": "shadowsocks",
+      "server": "91.201.65.122",
+      "server_port": 9039,
+      "method": "aes-256-cfb",
+      "password": "qYEN5HX4JKeVCdEC"
+    },
+    {
+      "tag": "[3] 🇮🇹",
       "type": "vmess",
-      "server": "66.163.117.58",
+      "server": "89.41.172.85",
       "server_port": 22324,
       "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
       "security": "auto",
       "authenticated_length": true
     },
     {
-      "tag": "[4] 🇫🇮",
-      "type": "shadowsocks",
-      "server": "37.202.246.212",
-      "server_port": 2070,
-      "method": "chacha20-ietf-poly1305",
-      "password": "LMnotcv4RdaEOBXT-LdtfA"
-    },
-    {
-      "tag": "[5] 🇵🇱",
+      "tag": "[4] 🇳🇱",
       "type": "vless",
-      "server": "144.31.5.64",
+      "server": "2.27.249.133",
       "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "uuid": "0f4081e7-612b-425f-8def-eebf144aedba",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl6.moritech.net",
-        "alpn": "h2"
+        "server_name": "vault.connectiux.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ITd6cmCxudmTvGcwnAzpd0VRe8jS9KJAQ1tmtVN3mCM",
+          "short_id": "9e15546f267baa64"
+        }
       }
     },
     {
-      "tag": "[6] 🇮🇹",
-      "type": "shadowsocks",
-      "server": "91.201.65.122",
-      "server_port": 9059,
-      "method": "aes-256-cfb",
-      "password": "9XwYyZsK8SNzQDtY"
+      "tag": "[5] 🇩🇪",
+      "type": "vless",
+      "server": "188.245.25.223",
+      "server_port": 8402,
+      "uuid": "0c1b7949-fe09-43d9-863f-2c031f66bfc1"
     },
     {
-      "tag": "[7] 🇨🇦",
+      "tag": "[6] 🇸🇪",
       "type": "shadowsocks",
-      "server": "51.222.155.113",
-      "server_port": 5601,
+      "server": "51.20.72.15",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "[7] 🇫🇮",
+      "type": "vless",
+      "server": "77.42.20.51",
+      "server_port": 1085,
+      "uuid": "0c1b7949-fe09-43d9-863f-2c031f66bfc1"
+    },
+    {
+      "tag": "[8] 🇨🇦",
+      "type": "shadowsocks",
+      "server": "185.156.47.97",
+      "server_port": 9443,
       "method": "aes-256-gcm",
-      "password": "Y6R9pAtvxxzmGC"
+      "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
+    },
+    {
+      "tag": "[9] 🇨🇦",
+      "type": "shadowsocks",
+      "server": "51.222.136.236",
+      "server_port": 8882,
+      "method": "aes-256-gcm",
+      "password": "kDWvXYZoTBcGkC4"
     },
     {
       "tag": "📱",
       "type": "http",
-      "server": "10.194.75.52",
+      "server": "10.22.222.243",
       "server_port": 10808
     },
     {
@@ -198,7 +226,7 @@
       }
     ],
     "auto_detect_interface": true,
-    "default_domain_resolver": "Quad9",
+    "default_domain_resolver": "Remote",
     "default_http_client": "Proxy"
   },
   "services": [
