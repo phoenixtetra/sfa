@@ -50,11 +50,10 @@
         "[2] 🇮🇹",
         "[3] 🇮🇹",
         "[4] 🇳🇱",
-        "[5] 🇩🇪",
-        "[6] 🇸🇪",
-        "[7] 🇫🇮",
+        "[5] 🇫🇮",
+        "[6] 🇫🇮",
+        "[7] 🇨🇦",
         "[8] 🇨🇦",
-        "[9] 🇨🇦",
         "📱",
         "Direct"
       ],
@@ -68,11 +67,10 @@
         "[2] 🇮🇹",
         "[3] 🇮🇹",
         "[4] 🇳🇱",
-        "[5] 🇩🇪",
-        "[6] 🇸🇪",
-        "[7] 🇫🇮",
+        "[5] 🇫🇮",
+        "[6] 🇫🇮",
+        "[7] 🇨🇦",
         "[8] 🇨🇦",
-        "[9] 🇨🇦",
         "📱"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
@@ -126,29 +124,41 @@
       }
     },
     {
-      "tag": "[5] 🇩🇪",
+      "tag": "[5] 🇫🇮",
       "type": "vless",
-      "server": "188.245.25.223",
-      "server_port": 8402,
-      "uuid": "0c1b7949-fe09-43d9-863f-2c031f66bfc1"
+      "server": "77.42.28.120",
+      "server_port": 1280,
+      "uuid": "c0e8fb58-a60f-4c15-9444-4e7c109797a8",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "is1-ssl.mzstatic.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
     },
     {
-      "tag": "[6] 🇸🇪",
-      "type": "shadowsocks",
-      "server": "51.20.72.15",
+      "tag": "[6] 🇫🇮",
+      "type": "vless",
+      "server": "185.242.247.44",
       "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true,
+        "server_name": "example.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU"
+        }
+      }
     },
     {
-      "tag": "[7] 🇫🇮",
-      "type": "vless",
-      "server": "77.42.20.51",
-      "server_port": 1085,
-      "uuid": "0c1b7949-fe09-43d9-863f-2c031f66bfc1"
-    },
-    {
-      "tag": "[8] 🇨🇦",
+      "tag": "[7] 🇨🇦",
       "type": "shadowsocks",
       "server": "185.156.47.97",
       "server_port": 9443,
@@ -156,7 +166,7 @@
       "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
     },
     {
-      "tag": "[9] 🇨🇦",
+      "tag": "[8] 🇨🇦",
       "type": "shadowsocks",
       "server": "51.222.136.236",
       "server_port": 8882,
