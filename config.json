@@ -48,12 +48,17 @@
         "Auto",
         "[1] 🇬🇧",
         "[2] 🇮🇹",
-        "[3] 🇮🇹",
-        "[4] 🇳🇱",
-        "[5] 🇫🇮",
-        "[6] 🇫🇮",
-        "[7] 🇨🇦",
-        "[8] 🇨🇦",
+        "[3] 🇩🇪",
+        "[4] 🇩🇪",
+        "[5] 🇩🇪",
+        "[6] 🇩🇪",
+        "[7] 🇳🇱",
+        "[8] 🇬🇧",
+        "[9] 🇹🇷",
+        "[10] 🇫🇮",
+        "[11] 🇨🇦",
+        "[12] 🇨🇦",
+        "[13] 🇨🇦",
         "📱",
         "Direct"
       ],
@@ -65,12 +70,17 @@
       "outbounds": [
         "[1] 🇬🇧",
         "[2] 🇮🇹",
-        "[3] 🇮🇹",
-        "[4] 🇳🇱",
-        "[5] 🇫🇮",
-        "[6] 🇫🇮",
-        "[7] 🇨🇦",
-        "[8] 🇨🇦",
+        "[3] 🇩🇪",
+        "[4] 🇩🇪",
+        "[5] 🇩🇪",
+        "[6] 🇩🇪",
+        "[7] 🇳🇱",
+        "[8] 🇬🇧",
+        "[9] 🇹🇷",
+        "[10] 🇫🇮",
+        "[11] 🇨🇦",
+        "[12] 🇨🇦",
+        "[13] 🇨🇦",
         "📱"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
@@ -94,71 +104,147 @@
       "password": "qYEN5HX4JKeVCdEC"
     },
     {
-      "tag": "[3] 🇮🇹",
-      "type": "vmess",
-      "server": "89.41.172.85",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto",
-      "authenticated_length": true
-    },
-    {
-      "tag": "[4] 🇳🇱",
+      "tag": "[3] 🇩🇪",
       "type": "vless",
-      "server": "2.27.249.133",
+      "server": "150.241.79.56",
       "server_port": 443,
-      "uuid": "0f4081e7-612b-425f-8def-eebf144aedba",
+      "uuid": "318c935d-c195-41d3-99ad-9bbcfdab3386",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vault.connectiux.com",
+        "server_name": "de2.srv.vbuste.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "ITd6cmCxudmTvGcwnAzpd0VRe8jS9KJAQ1tmtVN3mCM",
-          "short_id": "9e15546f267baa64"
+          "public_key": "0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08",
+          "short_id": "4be4110078ebed4a"
         }
       }
     },
     {
-      "tag": "[5] 🇫🇮",
+      "tag": "[4] 🇩🇪",
       "type": "vless",
-      "server": "77.42.28.120",
-      "server_port": 1280,
-      "uuid": "c0e8fb58-a60f-4c15-9444-4e7c109797a8",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "is1-ssl.mzstatic.com"
+      "server": "91.233.8.141",
+      "server_port": 443,
+      "uuid": "81d8f575-a9c3-03e7-be6b-c0e1dc1d2e20",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tnt-cloud.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        "reality": {
+          "enabled": true,
+          "public_key": "k76Ze8R0E5NyZwvBZT1A4n0zlVXxTeHQDAs0bBqiGQw",
+          "short_id": "6e5f2a3b"
+        }
       }
     },
     {
-      "tag": "[6] 🇫🇮",
+      "tag": "[5] 🇩🇪",
       "type": "vless",
-      "server": "185.242.247.44",
+      "server": "95.85.252.72",
       "server_port": 443,
-      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "uuid": "39770645-fcd2-4f35-a670-877672fc2ef7",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "example.org",
+        "server_name": "de1.lostpool.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU"
+          "public_key": "u5gK34Vx2N4cN4dowhD81_ZPMvymSPYt4Fvv44dKHAY",
+          "short_id": "5cca2511acbc3ca9"
         }
       }
     },
     {
-      "tag": "[7] 🇨🇦",
+      "tag": "[6] 🇩🇪",
+      "type": "vless",
+      "server": "142.132.140.143",
+      "server_port": 1003,
+      "uuid": "0e6cd6ca-fba2-4b86-923c-f0a021f7ad15"
+    },
+    {
+      "tag": "[7] 🇳🇱",
+      "type": "hysteria2",
+      "server": "109.104.153.124",
+      "server_port": 11592,
+      "obfs": {
+        "type": "salamander",
+        "password": "87d72c2949c0ca85bbda09459244e374"
+      },
+      "password": "35d26d53bc",
+      "tls": {
+        "enabled": true,
+        "server_name": "srv-0e5387.frd21.ru"
+      }
+    },
+    {
+      "tag": "[8] 🇬🇧",
+      "type": "vless",
+      "server": "66.90.104.43",
+      "server_port": 2083,
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "tag": "[9] 🇹🇷",
+      "type": "vless",
+      "server": "78.135.77.214",
+      "server_port": 9090,
+      "uuid": "e688f2f5-ad67-4530-a3ad-8ea042171217",
+      "transport": {
+        "type": "http",
+        "host": "play.google.com",
+        "path": "/",
+        "method": "GET"
+      }
+    },
+    {
+      "tag": "[10] 🇫🇮",
+      "type": "vless",
+      "server": "65.108.3.59",
+      "server_port": 443,
+      "uuid": "8df2e661-6f46-471b-9133-7fc13a0daa35",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.eitaa.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no",
+          "short_id": "90ec9bba2019"
+        }
+      }
+    },
+    {
+      "tag": "[11] 🇨🇦",
+      "type": "shadowsocks",
+      "server": "138.199.48.82",
+      "server_port": 9443,
+      "method": "aes-256-gcm",
+      "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
+    },
+    {
+      "tag": "[12] 🇨🇦",
       "type": "shadowsocks",
       "server": "185.156.47.97",
       "server_port": 9443,
@@ -166,7 +252,7 @@
       "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
     },
     {
-      "tag": "[8] 🇨🇦",
+      "tag": "[13] 🇨🇦",
       "type": "shadowsocks",
       "server": "51.222.136.236",
       "server_port": 8882,
