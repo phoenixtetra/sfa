@@ -318,7 +318,7 @@
           "geosite-category-ads-all"
         ],
         "type": "remote",
-        "url": "https://github.com/Chocolate4U/Iran-sing-box-rules/raw/rule-set/{tag}.srs"
+        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/{tag}.srs"
       }
     ],
     "auto_detect_interface": true,
