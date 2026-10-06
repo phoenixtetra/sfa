@@ -22,10 +22,8 @@
         "server": "Local"
       }
     ],
-    "optimistic": {
-      "enabled": true
-    },
-    "strategy": "ipv4_only"
+    "strategy": "ipv4_only",
+    "optimistic": true
   },
   "http_clients": [
     {
@@ -45,50 +43,52 @@
       "tag": "Proxy",
       "type": "selector",
       "outbounds": [
-        "Auto",
-        "[1] 🇬🇧",
-        "[2] 🇮🇹",
-        "[3] 🇩🇪",
-        "[4] 🇩🇪",
-        "[5] 🇩🇪",
-        "[6] 🇩🇪",
-        "[7] 🇳🇱",
-        "[8] 🇬🇧",
-        "[9] 🇹🇷",
-        "[10] 🇫🇮",
-        "[11] 🇨🇦",
-        "[12] 🇨🇦",
-        "[13] 🇨🇦",
-        "📱",
-        "Direct"
+        "🧠 Smart",
+        "🇬🇧 UK [1]",
+        "🇮🇹 IT [1]",
+        "🇩🇪 DE [1]",
+        "🇩🇪 DE [2]",
+        "🇩🇪 DE [3]",
+        "🇳🇱 NL [1]",
+        "🇳🇱 NL [2]",
+        "🇳🇱 NL [3]",
+        "🇹🇷 TR [1]",
+        "🇫🇮 FI [1]",
+        "🇫🇮 FI [2]",
+        "🇨🇦 CA [1]",
+        "🇨🇦 CA [2]",
+        "🇨🇦 CA [3]",
+        "🇨🇦 CA [4]",
+        "🌐 Direct"
       ],
       "interrupt_exist_connections": true
     },
     {
-      "tag": "Auto",
+      "tag": "🧠 Smart",
       "type": "urltest",
       "outbounds": [
-        "[1] 🇬🇧",
-        "[2] 🇮🇹",
-        "[3] 🇩🇪",
-        "[4] 🇩🇪",
-        "[5] 🇩🇪",
-        "[6] 🇩🇪",
-        "[7] 🇳🇱",
-        "[8] 🇬🇧",
-        "[9] 🇹🇷",
-        "[10] 🇫🇮",
-        "[11] 🇨🇦",
-        "[12] 🇨🇦",
-        "[13] 🇨🇦",
-        "📱"
+        "🇬🇧 UK [1]",
+        "🇮🇹 IT [1]",
+        "🇩🇪 DE [1]",
+        "🇩🇪 DE [2]",
+        "🇩🇪 DE [3]",
+        "🇳🇱 NL [1]",
+        "🇳🇱 NL [2]",
+        "🇳🇱 NL [3]",
+        "🇹🇷 TR [1]",
+        "🇫🇮 FI [1]",
+        "🇫🇮 FI [2]",
+        "🇨🇦 CA [1]",
+        "🇨🇦 CA [2]",
+        "🇨🇦 CA [3]",
+        "🇨🇦 CA [4]"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
       "idle_timeout": "1h"
     },
     {
-      "tag": "[1] 🇬🇧",
+      "tag": "🇬🇧 UK [1]",
       "type": "shadowsocks",
       "server": "146.70.23.32",
       "server_port": 8080,
@@ -96,7 +96,7 @@
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
-      "tag": "[2] 🇮🇹",
+      "tag": "🇮🇹 IT [1]",
       "type": "shadowsocks",
       "server": "91.201.65.122",
       "server_port": 9039,
@@ -104,28 +104,24 @@
       "password": "qYEN5HX4JKeVCdEC"
     },
     {
-      "tag": "[3] 🇩🇪",
+      "tag": "🇩🇪 DE [1]",
       "type": "vless",
-      "server": "150.241.79.56",
-      "server_port": 443,
-      "uuid": "318c935d-c195-41d3-99ad-9bbcfdab3386",
-      "flow": "xtls-rprx-vision",
+      "server": "188.114.96.2",
+      "server_port": 8443,
+      "uuid": "8bb52771-052e-40b5-ab53-c6e151ad2290",
       "tls": {
         "enabled": true,
-        "server_name": "de2.srv.vbuste.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08",
-          "short_id": "4be4110078ebed4a"
+        "server_name": "shop.neexbyte.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "shop.neexbyte.ir"
         }
       }
     },
     {
-      "tag": "[4] 🇩🇪",
+      "tag": "🇩🇪 DE [2]",
       "type": "vless",
       "server": "91.233.8.141",
       "server_port": 443,
@@ -146,7 +142,7 @@
       }
     },
     {
-      "tag": "[5] 🇩🇪",
+      "tag": "🇩🇪 DE [3]",
       "type": "vless",
       "server": "95.85.252.72",
       "server_port": 443,
@@ -167,42 +163,71 @@
       }
     },
     {
-      "tag": "[6] 🇩🇪",
+      "tag": "🇳🇱 NL [1]",
       "type": "vless",
-      "server": "142.132.140.143",
-      "server_port": 1003,
-      "uuid": "0e6cd6ca-fba2-4b86-923c-f0a021f7ad15"
-    },
-    {
-      "tag": "[7] 🇳🇱",
-      "type": "hysteria2",
-      "server": "109.104.153.124",
-      "server_port": 11592,
-      "obfs": {
-        "type": "salamander",
-        "password": "87d72c2949c0ca85bbda09459244e374"
-      },
-      "password": "35d26d53bc",
+      "server": "86.54.28.75",
+      "server_port": 443,
+      "uuid": "44ae52b9-76fc-444d-8e43-186b4384b80a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "srv-0e5387.frd21.ru"
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU",
+          "short_id": "1d86d17709852910"
+        }
       }
     },
     {
-      "tag": "[8] 🇬🇧",
+      "tag": "🇳🇱 NL [2]",
       "type": "vless",
-      "server": "66.90.104.43",
-      "server_port": 2083,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless",
-        "idle_timeout": "15s",
-        "ping_timeout": "15s"
+      "server": "free-amsterdam-node-1.cloudwidecdn.com",
+      "server_port": 443,
+      "uuid": "44ae52b9-76fc-444d-8e43-186b4384b80a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU",
+          "short_id": "1d86d17709852910"
+        }
       }
     },
     {
-      "tag": "[9] 🇹🇷",
+      "tag": "🇳🇱 NL [3]",
+      "type": "vless",
+      "server": "2.27.39.1",
+      "server_port": 443,
+      "uuid": "df53b6c2-8005-475c-9eb9-74e1be785dc8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "-u9DSQ5RMebplY_ti-Vy4BJP9dEoQ1lTOvjoxK8CqS4",
+          "short_id": "10358810"
+        }
+      }
+    },
+    {
+      "tag": "🇹🇷 TR [1]",
       "type": "vless",
       "server": "78.135.77.214",
       "server_port": 9090,
@@ -215,7 +240,14 @@
       }
     },
     {
-      "tag": "[10] 🇫🇮",
+      "tag": "🇫🇮 FI [1]",
+      "type": "vmess",
+      "server": "lucas.ehsanazizi-speed-server.com",
+      "server_port": 2110,
+      "uuid": "06d4d001-4168-4876-9416-7caecf578f40"
+    },
+    {
+      "tag": "🇫🇮 FI [2]",
       "type": "vless",
       "server": "65.108.3.59",
       "server_port": 443,
@@ -236,7 +268,7 @@
       }
     },
     {
-      "tag": "[11] 🇨🇦",
+      "tag": "🇨🇦 CA [1]",
       "type": "shadowsocks",
       "server": "138.199.48.82",
       "server_port": 9443,
@@ -244,7 +276,14 @@
       "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
     },
     {
-      "tag": "[12] 🇨🇦",
+      "tag": "🇨🇦 CA [2]",
+      "type": "vmess",
+      "server": "5.161.155.50",
+      "server_port": 37387,
+      "uuid": "43fc0a68-f682-468b-baed-979026ad6199"
+    },
+    {
+      "tag": "🇨🇦 CA [3]",
       "type": "shadowsocks",
       "server": "185.156.47.97",
       "server_port": 9443,
@@ -252,7 +291,7 @@
       "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
     },
     {
-      "tag": "[13] 🇨🇦",
+      "tag": "🇨🇦 CA [4]",
       "type": "shadowsocks",
       "server": "51.222.136.236",
       "server_port": 8882,
@@ -260,13 +299,7 @@
       "password": "kDWvXYZoTBcGkC4"
     },
     {
-      "tag": "📱",
-      "type": "http",
-      "server": "10.22.222.243",
-      "server_port": 10808
-    },
-    {
-      "tag": "Direct",
+      "tag": "🌐 Direct",
       "type": "direct"
     }
   ],
@@ -295,7 +328,7 @@
       {
         "ip_is_private": true,
         "action": "bypass",
-        "outbound": "Direct"
+        "outbound": "🌐 Direct"
       },
       {
         "rule_set": "geosite-category-ads-all",
@@ -307,7 +340,24 @@
           "geoip-ir"
         ],
         "action": "bypass",
-        "outbound": "Direct"
+        "outbound": "🌐 Direct"
+      },
+      {
+        "domain_suffix": [
+          "1xbet.com",
+          "oq0lmo5kvlkxj.pro"
+        ],
+        "action": "route",
+        "outbound": "🇨🇦 CA [1]"
+      },
+      {
+        "domain_suffix": [
+          "betexplorer.com",
+          "oddsportal.com",
+          "soccerstats.com"
+        ],
+        "action": "route",
+        "outbound": "🇳🇱 NL [1]"
       }
     ],
     "rule_set": [
@@ -336,8 +386,8 @@
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "store_dns": true,
-      "path": "cache.db"
+      "path": "cache.db",
+      "store_dns": true
     }
   }
 }
