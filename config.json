@@ -44,21 +44,16 @@
       "type": "selector",
       "outbounds": [
         "🧠 Smart",
+        "🇳🇱 NL [1]",
+        "🇳🇱 NL [2]",
+        "🇳🇱 NL [3]",
         "🇬🇧 UK [1]",
         "🇮🇹 IT [1]",
         "🇩🇪 DE [1]",
         "🇩🇪 DE [2]",
-        "🇩🇪 DE [3]",
-        "🇳🇱 NL [1]",
-        "🇳🇱 NL [2]",
-        "🇳🇱 NL [3]",
-        "🇹🇷 TR [1]",
         "🇫🇮 FI [1]",
         "🇫🇮 FI [2]",
         "🇨🇦 CA [1]",
-        "🇨🇦 CA [2]",
-        "🇨🇦 CA [3]",
-        "🇨🇦 CA [4]",
         "🌐 Direct"
       ],
       "interrupt_exist_connections": true
@@ -67,103 +62,45 @@
       "tag": "🧠 Smart",
       "type": "urltest",
       "outbounds": [
+        "🇳🇱 NL [1]",
+        "🇳🇱 NL [2]",
+        "🇳🇱 NL [3]",
         "🇬🇧 UK [1]",
         "🇮🇹 IT [1]",
         "🇩🇪 DE [1]",
         "🇩🇪 DE [2]",
-        "🇩🇪 DE [3]",
-        "🇳🇱 NL [1]",
-        "🇳🇱 NL [2]",
-        "🇳🇱 NL [3]",
-        "🇹🇷 TR [1]",
         "🇫🇮 FI [1]",
         "🇫🇮 FI [2]",
-        "🇨🇦 CA [1]",
-        "🇨🇦 CA [2]",
-        "🇨🇦 CA [3]",
-        "🇨🇦 CA [4]"
+        "🇨🇦 CA [1]"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1h",
       "idle_timeout": "1h"
     },
     {
-      "tag": "🇬🇧 UK [1]",
-      "type": "shadowsocks",
-      "server": "146.70.23.32",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "tag": "🇮🇹 IT [1]",
-      "type": "shadowsocks",
-      "server": "91.201.65.122",
-      "server_port": 9039,
-      "method": "aes-256-cfb",
-      "password": "qYEN5HX4JKeVCdEC"
-    },
-    {
-      "tag": "🇩🇪 DE [1]",
+      "tag": "🇳🇱 NL [1]",
       "type": "vless",
-      "server": "188.114.96.2",
-      "server_port": 8443,
-      "uuid": "8bb52771-052e-40b5-ab53-c6e151ad2290",
-      "tls": {
-        "enabled": true,
-        "server_name": "shop.neexbyte.ir"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "shop.neexbyte.ir"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 DE [2]",
-      "type": "vless",
-      "server": "91.233.8.141",
+      "server": "87.58.201.211",
       "server_port": 443,
-      "uuid": "81d8f575-a9c3-03e7-be6b-c0e1dc1d2e20",
-      "flow": "xtls-rprx-vision",
+      "uuid": "87fd990d-ca93-440a-bbd4-e8281c4a0910",
       "tls": {
         "enabled": true,
-        "server_name": "tnt-cloud.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k76Ze8R0E5NyZwvBZT1A4n0zlVXxTeHQDAs0bBqiGQw",
-          "short_id": "6e5f2a3b"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 DE [3]",
-      "type": "vless",
-      "server": "95.85.252.72",
-      "server_port": 443,
-      "uuid": "39770645-fcd2-4f35-a670-877672fc2ef7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "de1.lostpool.org",
+        "server_name": "d3-nl1.cloud-cdn.xyz",
+        "alpn": "h2",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "u5gK34Vx2N4cN4dowhD81_ZPMvymSPYt4Fvv44dKHAY",
-          "short_id": "5cca2511acbc3ca9"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vlgrpc",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
       }
     },
     {
-      "tag": "🇳🇱 NL [1]",
+      "tag": "🇳🇱 NL [2]",
       "type": "vless",
       "server": "86.54.28.75",
       "server_port": 443,
@@ -184,7 +121,7 @@
       }
     },
     {
-      "tag": "🇳🇱 NL [2]",
+      "tag": "🇳🇱 NL [3]",
       "type": "vless",
       "server": "free-amsterdam-node-1.cloudwidecdn.com",
       "server_port": 443,
@@ -205,38 +142,61 @@
       }
     },
     {
-      "tag": "🇳🇱 NL [3]",
+      "tag": "🇬🇧 UK [1]",
+      "type": "shadowsocks",
+      "server": "146.70.23.32",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "tag": "🇮🇹 IT [1]",
+      "type": "shadowsocks",
+      "server": "91.201.65.122",
+      "server_port": 9039,
+      "method": "aes-256-cfb",
+      "password": "qYEN5HX4JKeVCdEC"
+    },
+    {
+      "tag": "🇩🇪 DE [1]",
       "type": "vless",
-      "server": "2.27.39.1",
+      "server": "91.233.8.141",
       "server_port": 443,
-      "uuid": "df53b6c2-8005-475c-9eb9-74e1be785dc8",
+      "uuid": "81d8f575-a9c3-03e7-be6b-c0e1dc1d2e20",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "addons.mozilla.org",
-        "insecure": true,
+        "server_name": "tnt-cloud.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k76Ze8R0E5NyZwvBZT1A4n0zlVXxTeHQDAs0bBqiGQw",
+          "short_id": "6e5f2a3b"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 DE [2]",
+      "type": "vless",
+      "server": "95.85.252.72",
+      "server_port": 443,
+      "uuid": "39770645-fcd2-4f35-a670-877672fc2ef7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "de1.lostpool.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "-u9DSQ5RMebplY_ti-Vy4BJP9dEoQ1lTOvjoxK8CqS4",
-          "short_id": "10358810"
+          "public_key": "u5gK34Vx2N4cN4dowhD81_ZPMvymSPYt4Fvv44dKHAY",
+          "short_id": "5cca2511acbc3ca9"
         }
-      }
-    },
-    {
-      "tag": "🇹🇷 TR [1]",
-      "type": "vless",
-      "server": "78.135.77.214",
-      "server_port": 9090,
-      "uuid": "e688f2f5-ad67-4530-a3ad-8ea042171217",
-      "transport": {
-        "type": "http",
-        "host": "play.google.com",
-        "path": "/",
-        "method": "GET"
       }
     },
     {
@@ -269,29 +229,6 @@
     },
     {
       "tag": "🇨🇦 CA [1]",
-      "type": "shadowsocks",
-      "server": "138.199.48.82",
-      "server_port": 9443,
-      "method": "aes-256-gcm",
-      "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
-    },
-    {
-      "tag": "🇨🇦 CA [2]",
-      "type": "vmess",
-      "server": "5.161.155.50",
-      "server_port": 37387,
-      "uuid": "43fc0a68-f682-468b-baed-979026ad6199"
-    },
-    {
-      "tag": "🇨🇦 CA [3]",
-      "type": "shadowsocks",
-      "server": "185.156.47.97",
-      "server_port": 9443,
-      "method": "aes-256-gcm",
-      "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
-    },
-    {
-      "tag": "🇨🇦 CA [4]",
       "type": "shadowsocks",
       "server": "51.222.136.236",
       "server_port": 8882,
@@ -357,7 +294,7 @@
           "soccerstats.com"
         ],
         "action": "route",
-        "outbound": "🇳🇱 NL [1]"
+        "outbound": "🇳🇱 NL [2]"
       }
     ],
     "rule_set": [
