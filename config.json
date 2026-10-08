@@ -54,6 +54,7 @@
         "🇳🇱 NL [1]",
         "🇳🇱 NL [2]",
         "🇳🇱 NL [3]",
+        "🇸🇪 SE [1]",
         "🇫🇮 FI [1]",
         "🇨🇦 CA [1]",
         "🇺🇸 US [1]",
@@ -77,6 +78,7 @@
         "🇳🇱 NL [2]",
         "🇳🇱 NL [3]",
         "🇫🇮 FI [1]",
+        "🇸🇪 SE [1]",
         "🇨🇦 CA [1]",
         "🇺🇸 US [1]",
         "🇸🇬 SG [1]"
@@ -118,73 +120,56 @@
     },
     {
       "tag": "🇩🇪 DE [1]",
-      "type": "vless",
-      "server": "fastly.vexogf.ir",
-      "server_port": 9443,
-      "uuid": "9f02c95a-807c-4f8e-bdbc-c06b50c942b4",
-      "tls": {
-        "enabled": true,
-        "server_name": "play.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "YO2IIMfb_rukoknmG-91KRGGNb7BE1aBcr_-XKQkVXY",
-          "short_id": "f0c56d4f73d757f0"
-        }
+      "type": "vmess",
+      "server": "5.75.204.152",
+      "server_port": 43462,
+      "uuid": "38dd079f-b778-44cf-8532-574c6ebc24d4",
+      "security": "auto",
+      "authenticated_length": true,
+      "transport": {
+        "type": "http",
+        "path": "/",
+        "method": "GET"
       }
     },
     {
       "tag": "🇩🇪 DE [2]",
       "type": "vless",
-      "server": "91.233.8.141",
-      "server_port": 443,
-      "uuid": "81d8f575-a9c3-03e7-be6b-c0e1dc1d2e20",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "tnt-cloud.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k76Ze8R0E5NyZwvBZT1A4n0zlVXxTeHQDAs0bBqiGQw",
-          "short_id": "6e5f2a3b"
-        }
-      }
+      "server": "31.77.148.89",
+      "server_port": 45021,
+      "uuid": "ad263f1c-199e-4aaf-bf22-c3ad0407d377"
     },
     {
       "tag": "🇩🇪 DE [3]",
       "type": "vless",
-      "server": "91.233.8.141",
-      "server_port": 443,
-      "uuid": "81d8f575-a9c3-03e7-be6b-c0e1dc1d2e20",
-      "flow": "xtls-rprx-vision",
+      "server": "141.98.7.193",
+      "server_port": 2083,
+      "uuid": "e9e60f73-1618-491c-a85b-477bdc959ae6",
       "tls": {
         "enabled": true,
-        "server_name": "tnt-cloud.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k76Ze8R0E5NyZwvBZT1A4n0zlVXxTeHQDAs0bBqiGQw",
-          "short_id": "6e5f2a3b"
-        }
+        "server_name": "141.98.7.193"
       }
     },
     {
       "tag": "🇳🇱 NL [1]",
-      "type": "shadowsocks",
-      "server": "158.173.20.171",
+      "type": "trojan",
+      "server": "188.42.145.180",
       "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.volumeroot.com",
+        "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.volumeroot.com"
+        }
+      }
     },
     {
       "tag": "🇳🇱 NL [2]",
@@ -196,23 +181,22 @@
     },
     {
       "tag": "🇳🇱 NL [3]",
-      "type": "vless",
-      "server": "free-amsterdam-node-1.cloudwidecdn.com",
+      "type": "shadowsocks",
+      "server": "158.173.20.171",
       "server_port": 443,
-      "uuid": "44ae52b9-76fc-444d-8e43-186b4384b80a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU",
-          "short_id": "1d86d17709852910"
-        }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "tag": "🇸🇪 SE [1]",
+      "type": "vless",
+      "server": "70.34.199.238",
+      "server_port": 80,
+      "uuid": "98b76bb7-b2d1-47a8-8767-0d294c33e749",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
