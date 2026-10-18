@@ -7,7 +7,7 @@
     "servers": [
       {
         "tag": "Remote",
-        "type": "udp",
+        "type": "tcp",
         "server": "1.0.0.1",
         "detour": "Proxy"
       },
@@ -266,7 +266,7 @@
           "soccerstats.com"
         ],
         "action": "route",
-        "outbound": "🇧🇬 BG [1]"
+        "outbound": "🇳🇱 NL [1]"
       }
     ],
     "rule_set": [
