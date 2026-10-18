@@ -44,13 +44,14 @@
       "type": "selector",
       "outbounds": [
         "🧠 Smart",
-        "🇧🇬 BG [1]",
         "🇬🇧 UK [1]",
+        "🇫🇷 FR [1]",
+        "🇩🇪 DE [1]",
+        "🇩🇪 DE [2]",
+        "🇳🇱 NL [1]",
+        "🇧🇬 BG [1]",
         "🇱🇻 LV [1]",
         "🇮🇹 IT [1]",
-        "🇩🇪 DE [1]",
-        "🇳🇱 NL [1]",
-        "🇳🇱 NL [2]",
         "🇫🇮 FI [1]",
         "🇺🇸 US [1]",
         "🇸🇬 SG [1]",
@@ -62,13 +63,14 @@
       "tag": "🧠 Smart",
       "type": "urltest",
       "outbounds": [
-        "🇧🇬 BG [1]",
         "🇬🇧 UK [1]",
+        "🇫🇷 FR [1]",
+        "🇩🇪 DE [1]",
+        "🇩🇪 DE [2]",
+        "🇳🇱 NL [1]",
+        "🇧🇬 BG [1]",
         "🇱🇻 LV [1]",
         "🇮🇹 IT [1]",
-        "🇩🇪 DE [1]",
-        "🇳🇱 NL [1]",
-        "🇳🇱 NL [2]",
         "🇫🇮 FI [1]",
         "🇺🇸 US [1]",
         "🇸🇬 SG [1]"
@@ -77,36 +79,18 @@
       "interval": "10m"
     },
     {
-      "tag": "🇧🇬 BG [1]",
-      "type": "shadowsocks",
-      "server": "213.183.63.60",
-      "server_port": 9064,
-      "method": "aes-256-cfb",
-      "password": "cp8pRSUAyLhTfVWH"
-    },
-    {
       "tag": "🇬🇧 UK [1]",
-      "type": "shadowsocks",
-      "server": "146.70.23.32",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
+      "type": "vless",
+      "server": "13.135.33.165",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
     {
-      "tag": "🇱🇻 LV [1]",
-      "type": "shadowsocks",
-      "server": "185.135.86.175",
-      "server_port": 9086,
-      "method": "aes-256-cfb",
-      "password": "37Z4TFCYhfxcpc9Q"
-    },
-    {
-      "tag": "🇮🇹 IT [1]",
-      "type": "shadowsocks",
-      "server": "91.201.65.122",
-      "server_port": 9050,
-      "method": "aes-256-cfb",
-      "password": "FG5ddLsMPbV5CutE"
+      "tag": "🇫🇷 FR [1]",
+      "type": "vless",
+      "server": "51.44.197.117",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
     {
       "tag": "🇩🇪 DE [1]",
@@ -116,34 +100,24 @@
       "uuid": "ad263f1c-199e-4aaf-bf22-c3ad0407d377"
     },
     {
-      "tag": "🇳🇱 NL [1]",
-      "type": "vless",
-      "server": "185.200.199.199",
-      "server_port": 8444,
-      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
-      "tls": {
-        "enabled": true,
-        "server_name": "github.com",
-        "alpn": "h2",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": "457fab2ac885dbe0"
-        }
-      },
+      "tag": "🇩🇪 DE [2]",
+      "type": "vmess",
+      "server": "91.107.130.73",
+      "server_port": 29163,
+      "uuid": "telegram-id-----MiMiTDL-----",
+      "security": "auto",
+      "authenticated_length": true,
       "transport": {
-        "type": "grpc",
-        "service_name": "GunService",
-        "idle_timeout": "15s",
-        "ping_timeout": "15s"
+        "type": "ws",
+        "path": "/index.php",
+        "headers": {
+          "Host": "dynu.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
-      "tag": "🇳🇱 NL [2]",
+      "tag": "🇳🇱 NL [1]",
       "type": "trojan",
       "server": "188.42.145.180",
       "server_port": 443,
@@ -164,23 +138,47 @@
       }
     },
     {
+      "tag": "🇧🇬 BG [1]",
+      "type": "shadowsocks",
+      "server": "213.183.63.60",
+      "server_port": 9064,
+      "method": "aes-256-cfb",
+      "password": "cp8pRSUAyLhTfVWH"
+    },
+    {
+      "tag": "🇱🇻 LV [1]",
+      "type": "shadowsocks",
+      "server": "185.135.86.175",
+      "server_port": 9086,
+      "method": "aes-256-cfb",
+      "password": "37Z4TFCYhfxcpc9Q"
+    },
+    {
+      "tag": "🇮🇹 IT [1]",
+      "type": "shadowsocks",
+      "server": "91.201.65.122",
+      "server_port": 9050,
+      "method": "aes-256-cfb",
+      "password": "FG5ddLsMPbV5CutE"
+    },
+    {
       "tag": "🇫🇮 FI [1]",
       "type": "vless",
-      "server": "65.108.3.59",
-      "server_port": 443,
-      "uuid": "8df2e661-6f46-471b-9133-7fc13a0daa35",
-      "flow": "xtls-rprx-vision",
+      "server": "mci.amir12.ir",
+      "server_port": 2112,
+      "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
       "tls": {
         "enabled": true,
-        "server_name": "web.eitaa.com",
+        "server_name": "play.google.com",
+        "insecure": true,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no",
-          "short_id": "90ec9bba2019"
+          "public_key": "p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ",
+          "short_id": "125ba3"
         }
       }
     },
@@ -194,11 +192,20 @@
     },
     {
       "tag": "🇸🇬 SG [1]",
-      "type": "shadowsocks",
-      "server": "68.183.227.4",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
+      "type": "vmess",
+      "server": "91.107.130.73",
+      "server_port": 29163,
+      "uuid": "telegram-id-----MiMiTDL-----",
+      "security": "auto",
+      "authenticated_length": true,
+      "transport": {
+        "type": "ws",
+        "path": "/index.php",
+        "headers": {
+          "Host": "dynu.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
     },
     {
       "tag": "🌐 Direct",
@@ -250,7 +257,7 @@
           "oq0lmo5kvlkxj.pro"
         ],
         "action": "route",
-        "outbound": "🇨🇦 CA [1]"
+        "outbound": "🇸🇬 SG [1]"
       },
       {
         "domain_suffix": [
