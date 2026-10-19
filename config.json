@@ -7,7 +7,7 @@
     "servers": [
       {
         "tag": "Remote",
-        "type": "tcp",
+        "type": "udp",
         "server": "1.0.0.1",
         "detour": "Proxy"
       },
@@ -44,11 +44,11 @@
       "type": "selector",
       "outbounds": [
         "🧠 Smart",
-        "🇬🇧 UK [1]",
-        "🇫🇷 FR [1]",
         "🇩🇪 DE [1]",
         "🇩🇪 DE [2]",
+        "🇩🇪 DE [3]",
         "🇳🇱 NL [1]",
+        "🇳🇱 NL [2]",
         "🇧🇬 BG [1]",
         "🇱🇻 LV [1]",
         "🇮🇹 IT [1]",
@@ -63,11 +63,11 @@
       "tag": "🧠 Smart",
       "type": "urltest",
       "outbounds": [
-        "🇬🇧 UK [1]",
-        "🇫🇷 FR [1]",
         "🇩🇪 DE [1]",
         "🇩🇪 DE [2]",
+        "🇩🇪 DE [3]",
         "🇳🇱 NL [1]",
+        "🇳🇱 NL [2]",
         "🇧🇬 BG [1]",
         "🇱🇻 LV [1]",
         "🇮🇹 IT [1]",
@@ -79,45 +79,80 @@
       "interval": "10m"
     },
     {
-      "tag": "🇬🇧 UK [1]",
-      "type": "vless",
-      "server": "13.135.33.165",
-      "server_port": 22223,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    },
-    {
-      "tag": "🇫🇷 FR [1]",
-      "type": "vless",
-      "server": "51.44.197.117",
-      "server_port": 22223,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    },
-    {
       "tag": "🇩🇪 DE [1]",
+      "type": "vless",
+      "server": "66.151.40.60",
+      "server_port": 8444,
+      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "tag": "🇩🇪 DE [2]",
       "type": "vless",
       "server": "31.77.148.89",
       "server_port": 45021,
       "uuid": "ad263f1c-199e-4aaf-bf22-c3ad0407d377"
     },
     {
-      "tag": "🇩🇪 DE [2]",
-      "type": "vmess",
-      "server": "91.107.130.73",
-      "server_port": 29163,
-      "uuid": "telegram-id-----MiMiTDL-----",
-      "security": "auto",
-      "authenticated_length": true,
-      "transport": {
-        "type": "ws",
-        "path": "/index.php",
-        "headers": {
-          "Host": "dynu.com"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+      "tag": "🇩🇪 DE [3]",
+      "type": "trojan",
+      "server": "188.241.241.236",
+      "server_port": 443,
+      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
+      "tls": {
+        "enabled": true,
+        "server_name": "de10.dedushka.top",
+        "alpn": "http/1.1"
       }
     },
     {
       "tag": "🇳🇱 NL [1]",
+      "type": "vless",
+      "server": "185.192.22.159",
+      "server_port": 8444,
+      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "tag": "🇳🇱 NL [2]",
       "type": "trojan",
       "server": "188.42.145.180",
       "server_port": 443,
@@ -164,22 +199,13 @@
     {
       "tag": "🇫🇮 FI [1]",
       "type": "vless",
-      "server": "mci.amir12.ir",
-      "server_port": 2112,
+      "server": "77.42.73.93",
+      "server_port": 8080,
       "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
-      "tls": {
-        "enabled": true,
-        "server_name": "play.google.com",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ",
-          "short_id": "125ba3"
-        }
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
@@ -277,7 +303,7 @@
           "geosite-category-ads-all"
         ],
         "type": "remote",
-        "url": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/{tag}.srs"
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/{tag}.srs"
       }
     ],
     "auto_detect_interface": true,
