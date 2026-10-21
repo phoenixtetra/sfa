@@ -44,17 +44,14 @@
       "type": "selector",
       "outbounds": [
         "🧠 Smart",
+        "🇮🇹 IT [1]",
+        "🇮🇹 IT [2]",
         "🇩🇪 DE [1]",
         "🇩🇪 DE [2]",
         "🇩🇪 DE [3]",
         "🇳🇱 NL [1]",
-        "🇳🇱 NL [2]",
-        "🇧🇬 BG [1]",
-        "🇱🇻 LV [1]",
-        "🇮🇹 IT [1]",
-        "🇫🇮 FI [1]",
         "🇺🇸 US [1]",
-        "🇸🇬 SG [1]",
+        "💻️ Proxy",
         "🌐 Direct"
       ],
       "interrupt_exist_connections": true
@@ -63,23 +60,43 @@
       "tag": "🧠 Smart",
       "type": "urltest",
       "outbounds": [
+        "🇮🇹 IT [1]",
+        "🇮🇹 IT [2]",
         "🇩🇪 DE [1]",
         "🇩🇪 DE [2]",
         "🇩🇪 DE [3]",
         "🇳🇱 NL [1]",
-        "🇳🇱 NL [2]",
-        "🇧🇬 BG [1]",
-        "🇱🇻 LV [1]",
-        "🇮🇹 IT [1]",
-        "🇫🇮 FI [1]",
-        "🇺🇸 US [1]",
-        "🇸🇬 SG [1]"
+        "🇺🇸 US [1]"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "10m"
     },
     {
+      "tag": "🇮🇹 IT [1]",
+      "type": "shadowsocks",
+      "server": "202.50.253.54",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "tag": "🇮🇹 IT [2]",
+      "type": "shadowsocks",
+      "server": "57.131.48.45",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "itzvpn@321"
+    },
+    {
       "tag": "🇩🇪 DE [1]",
+      "type": "shadowsocks",
+      "server": "45.89.223.16",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "62mngrv6rcq8if8a"
+    },
+    {
+      "tag": "🇩🇪 DE [2]",
       "type": "vless",
       "server": "66.151.40.60",
       "server_port": 8444,
@@ -106,23 +123,11 @@
       }
     },
     {
-      "tag": "🇩🇪 DE [2]",
+      "tag": "🇩🇪 DE [3]",
       "type": "vless",
       "server": "31.77.148.89",
       "server_port": 45021,
       "uuid": "ad263f1c-199e-4aaf-bf22-c3ad0407d377"
-    },
-    {
-      "tag": "🇩🇪 DE [3]",
-      "type": "trojan",
-      "server": "188.241.241.236",
-      "server_port": 443,
-      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
-      "tls": {
-        "enabled": true,
-        "server_name": "de10.dedushka.top",
-        "alpn": "http/1.1"
-      }
     },
     {
       "tag": "🇳🇱 NL [1]",
@@ -152,63 +157,6 @@
       }
     },
     {
-      "tag": "🇳🇱 NL [2]",
-      "type": "trojan",
-      "server": "188.42.145.180",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.volumeroot.com",
-        "alpn": [
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.volumeroot.com"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 BG [1]",
-      "type": "shadowsocks",
-      "server": "213.183.63.60",
-      "server_port": 9064,
-      "method": "aes-256-cfb",
-      "password": "cp8pRSUAyLhTfVWH"
-    },
-    {
-      "tag": "🇱🇻 LV [1]",
-      "type": "shadowsocks",
-      "server": "185.135.86.175",
-      "server_port": 9086,
-      "method": "aes-256-cfb",
-      "password": "37Z4TFCYhfxcpc9Q"
-    },
-    {
-      "tag": "🇮🇹 IT [1]",
-      "type": "shadowsocks",
-      "server": "91.201.65.122",
-      "server_port": 9050,
-      "method": "aes-256-cfb",
-      "password": "FG5ddLsMPbV5CutE"
-    },
-    {
-      "tag": "🇫🇮 FI [1]",
-      "type": "vless",
-      "server": "77.42.73.93",
-      "server_port": 8080,
-      "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
       "tag": "🇺🇸 US [1]",
       "type": "shadowsocks",
       "server": "79.110.53.169",
@@ -217,21 +165,10 @@
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
-      "tag": "🇸🇬 SG [1]",
-      "type": "vmess",
-      "server": "91.107.130.73",
-      "server_port": 29163,
-      "uuid": "telegram-id-----MiMiTDL-----",
-      "security": "auto",
-      "authenticated_length": true,
-      "transport": {
-        "type": "ws",
-        "path": "/index.php",
-        "headers": {
-          "Host": "dynu.com"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
+      "tag": "💻️ Proxy",
+      "type": "http",
+      "server": "127.0.0.1",
+      "server_port": 1080
     },
     {
       "tag": "🌐 Direct",
@@ -279,17 +216,7 @@
       },
       {
         "domain_suffix": [
-          "1xbet.com",
-          "oq0lmo5kvlkxj.pro"
-        ],
-        "action": "route",
-        "outbound": "🇸🇬 SG [1]"
-      },
-      {
-        "domain_suffix": [
-          "betexplorer.com",
-          "oddsportal.com",
-          "soccerstats.com"
+          "betexplorer.com"
         ],
         "action": "route",
         "outbound": "🇳🇱 NL [1]"
