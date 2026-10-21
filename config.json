@@ -44,12 +44,13 @@
       "type": "selector",
       "outbounds": [
         "🧠 Smart",
-        "🇮🇹 IT [1]",
-        "🇮🇹 IT [2]",
         "🇩🇪 DE [1]",
         "🇩🇪 DE [2]",
-        "🇩🇪 DE [3]",
         "🇳🇱 NL [1]",
+        "🇫🇷 FR [1]",
+        "🇬🇧 UK [1]",
+        "🇮🇹 IT [1]",
+        "🇹🇷 TR [1]",
         "🇺🇸 US [1]",
         "💻️ Proxy",
         "🌐 Direct"
@@ -60,70 +61,27 @@
       "tag": "🧠 Smart",
       "type": "urltest",
       "outbounds": [
-        "🇮🇹 IT [1]",
-        "🇮🇹 IT [2]",
         "🇩🇪 DE [1]",
         "🇩🇪 DE [2]",
-        "🇩🇪 DE [3]",
         "🇳🇱 NL [1]",
+        "🇫🇷 FR [1]",
+        "🇬🇧 UK [1]",
+        "🇮🇹 IT [1]",
+        "🇹🇷 TR [1]",
         "🇺🇸 US [1]"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "10m"
     },
     {
-      "tag": "🇮🇹 IT [1]",
-      "type": "shadowsocks",
-      "server": "202.50.253.54",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "tag": "🇮🇹 IT [2]",
-      "type": "shadowsocks",
-      "server": "57.131.48.45",
-      "server_port": 8388,
-      "method": "aes-256-gcm",
-      "password": "itzvpn@321"
-    },
-    {
       "tag": "🇩🇪 DE [1]",
-      "type": "shadowsocks",
-      "server": "45.89.223.16",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "62mngrv6rcq8if8a"
+      "type": "vless",
+      "server": "91.107.190.254",
+      "server_port": 23198,
+      "uuid": "322d8121-e82c-57a8-9d7d-0a83d4bdf0ff"
     },
     {
       "tag": "🇩🇪 DE [2]",
-      "type": "vless",
-      "server": "66.151.40.60",
-      "server_port": 8444,
-      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
-      "tls": {
-        "enabled": true,
-        "server_name": "github.com",
-        "alpn": "h2",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": "457fab2ac885dbe0"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "GunService",
-        "idle_timeout": "15s",
-        "ping_timeout": "15s"
-      }
-    },
-    {
-      "tag": "🇩🇪 DE [3]",
       "type": "vless",
       "server": "31.77.148.89",
       "server_port": 45021,
@@ -155,6 +113,35 @@
         "idle_timeout": "15s",
         "ping_timeout": "15s"
       }
+    },
+    {
+      "tag": "🇫🇷 FR [1]",
+      "type": "vless",
+      "server": "51.44.187.221",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "tag": "🇬🇧 UK [1]",
+      "type": "vless",
+      "server": "13.134.170.98",
+      "server_port": 22224,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "tag": "🇮🇹 IT [1]",
+      "type": "shadowsocks",
+      "server": "202.50.253.54",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "tag": "🇹🇷 TR [1]",
+      "type": "vmess",
+      "server": "206.1.100.161",
+      "server_port": 8080,
+      "uuid": "9db6dd0d-d628-4373-868d-37466f5ee160"
     },
     {
       "tag": "🇺🇸 US [1]",
