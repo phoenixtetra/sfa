@@ -50,7 +50,9 @@
         "🇬🇧 UK [1]",
         "🇮🇹 IT [1]",
         "🇹🇷 TR [1]",
+        "🇹🇷 TR [2]",
         "🇺🇸 US [1]",
+        "🇺🇸 US [2]",
         "💻️ Proxy",
         "🌐 Direct"
       ],
@@ -64,9 +66,11 @@
         "🇳🇱 NL [1]",
         "🇫🇷 FR [1]",
         "🇬🇧 UK [1]",
-        "🇮🇹 IT [1]",
         "🇹🇷 TR [1]",
-        "🇺🇸 US [1]"
+        "🇹🇷 TR [2]",
+        "🇮🇹 IT [1]",
+        "🇺🇸 US [1]",
+        "🇺🇸 US [2]"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "10m"
@@ -135,28 +139,29 @@
     },
     {
       "tag": "🇹🇷 TR [1]",
-      "type": "hysteria2",
-      "server": "153.56.210.134",
-      "server_port": 34121,
-      "password": "c8ed6cd1-6566-4f7a-819e-1c55b2b360c9",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "9a33460c-b037-47aa-a606-d04211f4e0ec"
-      }
+      "type": "http",
+      "server": "92.38.180.30",
+      "server_port": 8080,
+      "username": "aNr3RUwFtsDyGFPmVW3KA5vM",
+      "password": "Rosita212"
     },
     {
+      "tag": "🇹🇷 TR [2]",
       "type": "vmess",
-      "server": "206.1.100.161",
-      "server_port": 8080,
-      "uuid": "9db6dd0d-d628-4373-868d-37466f5ee160"
+      "server": "free.ertebatgoostar.ir",
+      "server_port": 443,
+      "uuid": "c9eab439-53bf-46e4-ba58-fc368ae1ee8c"
     },
     {
       "tag": "🇺🇸 US [1]",
+      "type": "http",
+      "server": "45.130.86.3",
+      "server_port": 8080,
+      "username": "aNr3RUwFtsDyGFPmVW3KA5vM",
+      "password": "Rosita212"
+    },
+    {
+      "tag": "🇺🇸 US [2]",
       "type": "shadowsocks",
       "server": "79.110.53.169",
       "server_port": 8080,
