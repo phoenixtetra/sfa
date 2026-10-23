@@ -44,15 +44,12 @@
       "type": "selector",
       "outbounds": [
         "🧠 Smart",
-        "🇩🇪 DE [1]",
         "🇳🇱 NL [1]",
-        "🇫🇷 FR [1]",
-        "🇬🇧 UK [1]",
+        "🇳🇱 NL [2]",
+        "🇩🇪 DE [1]",
         "🇮🇹 IT [1]",
-        "🇹🇷 TR [1]",
-        "🇹🇷 TR [2]",
+        "🇨🇦 CA [1]",
         "🇺🇸 US [1]",
-        "🇺🇸 US [2]",
         "💻️ Proxy",
         "🌐 Direct"
       ],
@@ -62,36 +59,20 @@
       "tag": "🧠 Smart",
       "type": "urltest",
       "outbounds": [
-        "🇩🇪 DE [1]",
         "🇳🇱 NL [1]",
-        "🇫🇷 FR [1]",
-        "🇬🇧 UK [1]",
-        "🇹🇷 TR [1]",
-        "🇹🇷 TR [2]",
+        "🇳🇱 NL [2]",
+        "🇩🇪 DE [1]",
         "🇮🇹 IT [1]",
-        "🇺🇸 US [1]",
-        "🇺🇸 US [2]"
+        "🇨🇦 CA [1]",
+        "🇺🇸 US [1]"
       ],
       "url": "http://cp.cloudflare.com/generate_204",
       "interval": "10m"
     },
     {
-      "tag": "🇩🇪 DE [1]",
-      "type": "vmess",
-      "server": "144.31.165.127",
-      "server_port": 80,
-      "uuid": "cd96479e-9c39-4a7f-ba0c-806a83af19ca",
-      "transport": {
-        "type": "http",
-        "host": "gvt1.com",
-        "path": "/",
-        "method": "GET"
-      }
-    },
-    {
       "tag": "🇳🇱 NL [1]",
       "type": "vless",
-      "server": "185.192.22.159",
+      "server": "185.200.199.199",
       "server_port": 8444,
       "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
       "tls": {
@@ -116,18 +97,32 @@
       }
     },
     {
-      "tag": "🇫🇷 FR [1]",
+      "tag": "🇳🇱 NL [2]",
       "type": "vless",
-      "server": "35.180.76.81",
-      "server_port": 22224,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+      "server": "45.85.117.174",
+      "server_port": 443,
+      "uuid": "92a4056a-38d6-49d0-8bd2-600e55af1e9f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "rF4J_igTFQRUXEaY351LiZG0Ea4OuNpOakuAbqT0bAw",
+          "short_id": "088faf47"
+        }
+      }
     },
     {
-      "tag": "🇬🇧 UK [1]",
+      "tag": "🇩🇪 DE [1]",
       "type": "vless",
-      "server": "13.134.170.98",
-      "server_port": 22224,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+      "server": "31.77.148.89",
+      "server_port": 45021,
+      "uuid": "ad263f1c-199e-4aaf-bf22-c3ad0407d377"
     },
     {
       "tag": "🇮🇹 IT [1]",
@@ -138,30 +133,28 @@
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
-      "tag": "🇹🇷 TR [1]",
-      "type": "http",
-      "server": "92.38.180.30",
-      "server_port": 8080,
-      "username": "aNr3RUwFtsDyGFPmVW3KA5vM",
-      "password": "Rosita212"
-    },
-    {
-      "tag": "🇹🇷 TR [2]",
-      "type": "vmess",
-      "server": "free.ertebatgoostar.ir",
-      "server_port": 443,
-      "uuid": "c9eab439-53bf-46e4-ba58-fc368ae1ee8c"
+      "tag": "🇨🇦 CA [1]",
+      "type": "vless",
+      "server": "213.152.165.203",
+      "server_port": 2093,
+      "uuid": "0b418782-e023-447e-ba99-e66b84ff118d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM",
+          "short_id": "8a9725533854a7e8"
+        }
+      }
     },
     {
       "tag": "🇺🇸 US [1]",
-      "type": "http",
-      "server": "45.130.86.3",
-      "server_port": 8080,
-      "username": "aNr3RUwFtsDyGFPmVW3KA5vM",
-      "password": "Rosita212"
-    },
-    {
-      "tag": "🇺🇸 US [2]",
       "type": "shadowsocks",
       "server": "79.110.53.169",
       "server_port": 8080,
@@ -220,6 +213,7 @@
       },
       {
         "domain_suffix": [
+          "oddsportal.com",
           "betexplorer.com"
         ],
         "action": "route",
